@@ -1,0 +1,396 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+a {
+    color: #fff;
+    text-transform: uppercase;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: 4px;
+    text-decoration: none;
+}
+
+#nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #122333;
+    height: 8vh;
+    border-bottom: groove #490b2d;
+
+}
+
+.nav-list {
+    list-style: none;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+    text-transform: uppercase;
+    width: 300px;
+    overflow: hidden;
+
+
+}
+
+.nav-list li {
+
+    background-color: #122333;
+    width: 250px;
+    transition: 0.7s;
+    color: #fff;
+    letter-spacing: 4px;
+    gap: 10px;
+    margin: 1px;
+    padding: 40px 15px 40px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.nav-list li:hover {
+
+    background-color: #fff;
+    padding: 47px 15px 40px;
+    border-radius: 7px;
+}
+
+.nav-list li a {
+    color: #fff;
+    font-size: 20px;
+    height: 100%;
+}
+
+.nav-list li:hover a {
+    color: #122333;
+    text-decoration: none;
+    display: flex;
+    width: 100%;
+    background-color: #f6f8fa;
+    transition: 0.5s ease;
+}
+
+.nav-list li a:hover {
+    font-size: 30px;
+    transition: 0.5s ease;
+
+}
+
+.burguer {
+
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.burguer div {
+
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.7s;
+}
+
+.menu {
+    background-color: #122333;
+    width: 300px;
+    height: 100%;
+    position: absolute;
+    transition: 0.7s;
+    top: 0;
+    left: 0;
+    animation: fade 0.5s ease-in-out forwards;
+}
+
+.menu li:hover {
+    color: #122333;
+    background-color: #fff;
+}
+
+body {
+    background-color: #c2c2c2;
+}
+
+.menu-close {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    background-color: #490b2d;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-weight: bold;
+
+
+}
+
+.close-conteiner {
+    width: 300px;
+    height: 8vh;
+
+}
+
+
+@keyframes fade {
+
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+
+@keyframes fade-out {
+
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-20%);
+        opacity: 0;
+    }
+
+}
+
+@keyframes deladin {
+
+    from {
+
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+
+    }
+
+}
+
+
+
+.seletor {
+
+    margin: 8px;
+    height: 30px;
+    border-radius: 5px;
+
+
+}
+
+.botao-confirm {
+    width: 120px;
+    align-self: center;
+    margin: 8px;
+    height: 30px;
+    border-radius: 5px;
+    border-color: transparent;
+}
+
+.tabela-horario {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-left: 90px;
+    width: 350px;
+    background-color: #fff;
+    border: solid #2a3e52;
+    border-radius: 9px;
+    align-items: center;
+}
+
+.tabela-horario td {
+    text-align: center;
+    height: 80px;
+    width: 150px;
+    border: solid 1px #2a3e52;
+    font-weight: bold;
+}
+
+.flexconteiner {
+    display: flex;
+    gap: 0px;
+    height: 93vh;
+    flex-direction: row;
+    align-items: flex-start;
+    transition: 0.7;
+    text-transform: uppercase;
+
+}
+
+.table-conteiner {
+    width: 700px;
+    margin-top: 40px;
+    max-height: 1150PX;
+    background-color: #122333;
+    border: solid #2a3e52;
+    border-radius: 9px;
+    float: right;
+    margin-right: 40px;
+}
+
+.selectors-conteiner {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 700px;
+    height: 500px;
+    background-color: #122333;
+    margin-right: 0;
+    margin-left: 550px;
+    margin-top: 40px;
+    border: solid #2a3e52;
+    border-radius: 9px;
+    align-self: flex-start;
+
+}
+
+.tabelaCardapio{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-left: 90px;
+    background-color: #fff;
+    border: solid #2a3e52;
+    border-radius: 9px;
+    align-items: center;
+}
+
+.tabelaCardapio td {
+    text-align: center;
+    height: 80px;
+    width: 150px;
+    border: solid 1px #2a3e52;
+    font-weight: bold;
+}
+
+
+.Lucas {
+    background-color: #eed89c;
+}
+
+.Mariana {
+    background-color: #cbb6e4;
+
+}
+
+.Manuela {
+    background-color: #7bbd86;
+}
+
+.Leonardo {
+    background-color: #913737;
+}
+
+.Daniel {
+    background-color: #001ea3;
+    color: #fff;
+}
+
+.Marcela {
+    background-color: #dd3bdd;
+
+}
+
+.Iara {
+    background-color: #89699b;
+}
+
+.JavaScriptMan {
+    background-color: #bd9a00;
+}
+
+.Chico {
+    background-color: #929292;
+}
+
+.Gaspar {
+    background-color: #b1d5f7;
+}
+
+.Paulo {
+    background-color: #ac6203;
+}
+
+.Ranaildo {
+    background-color: #5900be;
+}
+
+.Marcelo {
+    background-color: #d4d1a4;
+}
+
+.Eber {
+    background-color: #fbff00;
+}
+
+.Rute {
+    background-color: #7a4949;
+}
+
+.Rosa {
+    background-color: #af0000;
+}
+
+.Sorvetinho {
+    background-color: #6ca3d6;
+}
+
+.Lula {
+    background-color: #048004;
+}
+
+.AnaG {
+    background-color: #eee1c5;
+}
+
+.Linduberg {
+    background-color: #3c5b79;
+}
+.Nancy {
+    background-color: #00eeee;
+}
+
+.Eletrilha {
+    background-color: #c57a17;
+}
+
+.Praticas {
+    background-color: #c5e4e0;
+}
+.Oficina {
+    background-color: rgb(117, 221, 13);
+}
+.Ruziane {
+    background-color: rgb(110, 49, 110);
+}
+/*cardapio*/
+
+
+.lanche{
+
+    background-color: #e2c256;
+   
+}
+
+.almoco{
+
+    background-image: linear-gradients(to right, orange,white);
+}
