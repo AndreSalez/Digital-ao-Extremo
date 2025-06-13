@@ -6,8 +6,8 @@ function menu() {
 
     var ul = document.createElement("ul");
     ul.classList.add("nav-list");
-  
-                                               ///Adicionado link0 para a pagina index///
+
+    ///Adicionado link0 para a pagina index///
 
     var li0 = document.createElement("li");
     var li1 = document.createElement("li");
@@ -36,19 +36,19 @@ function menu() {
 
 
     link0.innerText = "Home";
-     link0.href = "index.html";
+    link0.href = "index.html";
 
     link1.innerText = "sobre";
-        link1.href = "sobre.html";
+    link1.href = "sobre.html";
 
     link2.innerText = "Horários";
-        link2.href = "horarios.html";
+    link2.href = "horarios.html";
 
     link3.innerText = "Cardápio";
-        link3.href = "cardapio.html";
+    link3.href = "cardapio.html";
 
     link4.innerText = "area de estudo";
-     link4.href = "areaestudo.html";
+    link4.href = "areaestudo.html";
 
     itens.appendChild(ul);
 
@@ -139,17 +139,13 @@ function tabelinha() {
     var td11 = document.createElement("td")
     var td12 = document.createElement("td")
 
-    td1.innerText = "EXEMPLO"
-    td2.innerText = "balabalba"
-    td3.innerText = "balabalba"
-    td4.innerText = "lanche - 10:00h - 10:20h"
-    td6.innerText = ""
+
+    td4.innerText = "Lanche - 10:00h - 10:20h"
+
     td7.innerText = "ALMOÇO"
-    td8.innerText = ""
-    td9.innerText = ""
-    td10.innerText = "LAnche- 15:00h - 15:20h"
-    td11.innerText = "balabalba"
-    td12.innerText = "balabalba"
+
+    td10.innerText = "Lanche- 15:00h - 15:20h"
+
 
     tr1.appendChild(td1)
     tr2.appendChild(td2)
@@ -179,7 +175,7 @@ function tabelinha() {
     table.appendChild(tr12)
 
 
-                           ///condição seletor para tabela///
+    ///condição seletor para tabela///
 
 
     var Turma = document.getElementById("Turma").value;
@@ -189,13 +185,13 @@ function tabelinha() {
         td1.innerText = "INGLÊS - LUCAS"
         td2.innerText = "SOCIOLOGIA - MARIANA"
         td3.innerText = "BIOLOGIA - MANUELA"
-       
+
         td5.innerText = " ED. FISICA - DANIEL"
         td6.innerText = "QUÍMICA - MARCELA"
-       
+
         td8.innerText = "PROJETO DE VIDA - IARA"
         td9.innerText = "PROJETO DE VIDA - IARA"
-        
+
         td11.innerText = "NOÇÕES DE ELETRÔNICA E ELETRICIDADE - NANCY"
         td12.innerText = "NOÇÕES DE ELETRÔNICA E ELETRICIDADE - NANCY"
 
@@ -225,7 +221,7 @@ function tabelinha() {
 
         td8.innerText = "MATEMÁTICA - JOELSON"
         td9.innerText = "MATEMÁTICA - JOELSON"
-        
+
         td11.innerText = "ED. FISICA - DANIEL"
         td12.innerText = "GEOGRAFIA - PAULO"
 
@@ -267,7 +263,7 @@ function tabelinha() {
         td9.classList.add("Marcela")
 
         td11.classList.add("Lula")
-        td12.classList.add("")
+
 
     }
     else if (Turma == "1AI" && Dia == "QUI") {
@@ -284,7 +280,7 @@ function tabelinha() {
         td11.innerText = "NOÇÕES DE ELETRÔNICA E ELETRICIDADE - NANCY"
         td12.innerText = "NOÇÕES DE ELETRÔNICA E ELETRICIDADE - NANCY"
 
-        
+
         td1.classList.add("Linduberg")
         td2.classList.add("Linduberg")
         td3.classList.add("Chico")
@@ -309,8 +305,8 @@ function tabelinha() {
         td8.innerText = "FSICA - SEM PROFESSOR"
         td9.innerText = "FILOSOFIA - SEM PROFESSOR"
 
-        td11.innerText = "ORIENTAÇÃO ACADÊMICA - SEM PROFESSOR"
-        td12.innerText = "ORIENTAÇÃO ACADÊMICA - SEM PROFESSOR"
+        td11.innerText = "ORIENTAÇÃO ACADÊMICA - RUZIANE"
+        td12.innerText = "ORIENTAÇÃO ACADÊMICA - RUZIANE"
 
         td1.classList.add("AnaG")
         td2.classList.add("AnaG")
@@ -319,11 +315,12 @@ function tabelinha() {
         td5.classList.add("Linduberg")
         td6.classList.add("Linduberg")
 
-        td8.classList.add("")
-        td9.classList.add("")
+        td11.classList.add("Ruziane")
+        td12.classList.add("Ruziane")
 
-        td11.classList.add("")
-        td12.classList.add("")
+
+
+
 
     }
     else if (Turma == "1BI" && Dia == "SEG") {
@@ -425,12 +422,12 @@ function tabelinha() {
         td11.innerText = "ORIENTAÇÃO ACADÊMICA - LULA"
         td12.innerText = "ORIENTAÇÃO ACADÊMICA - LULA"
 
-        td1.classList.add("")
+
         td2.classList.add("Chico")
         td3.classList.add("Paulo")
 
         td5.classList.add("Marcela")
-        td6.classList.add("")
+
 
         td8.classList.add("Nancy")
         td9.classList.add("Nancy")
@@ -463,8 +460,8 @@ function tabelinha() {
         td8.classList.add("Sorvetinho")
         td9.classList.add("Sorvetinho")
 
-        td11.classList.add("")
-        td12.classList.add("")
+
+
 
     }
     else if (Turma == "1CI" && Dia == "SEG") {
@@ -489,7 +486,7 @@ function tabelinha() {
         td6.classList.add("Nancy")
 
         td8.classList.add("Marcela")
-        td9.classList.add("")
+
 
         td11.classList.add("Praticas")
         td12.classList.add("Manuela")
@@ -538,8 +535,8 @@ function tabelinha() {
         td12.innerText = "MATEMÁTICA - JOELSON"
 
         td1.classList.add("Paulo")
-        td2.classList.add("LinduBerg")
-        td3.classList.add("LinduBerg")
+        td2.classList.add("Linduberg")
+        td3.classList.add("Linduberg")
 
         td5.classList.add("Eletrilha")
         td6.classList.add("Eletrilha")
@@ -553,8 +550,8 @@ function tabelinha() {
     }
     else if (Turma == "1CI" && Dia == "QUI") {
         td1.innerText = "INGLÊS - LUCAS"
-        td2.innerText = "NOÇÕES DE ELETRÔNICA E ELETRICIDADE - LINDEMBERG"
-        td3.innerText = "NOÇÕES DE ELETRÔNICA E ELETRICIDADE - LINDEMBERG"
+        td2.innerText = "NOÇÕES DE ELETRÔNICA E ELETRICIDADE - NANCY"
+        td3.innerText = "NOÇÕES DE ELETRÔNICA E ELETRICIDADE - NANCY"
 
         td5.innerText = "FÍSICA - SEM PROFESSOR"
         td6.innerText = "PORTUGUÊS - ANA GUERRA"
@@ -566,17 +563,17 @@ function tabelinha() {
         td12.innerText = "FILOSOFIA - SEM PROFESSOR"
 
         td1.classList.add("Lucas")
-        td2.classList.add("Linduberg")
-        td3.classList.add("Linduberg")
+        td2.classList.add("Nancy")
+        td3.classList.add("Nancy")
 
-        td5.classList.add("")
+        
         td6.classList.add("AnaG")
 
         td8.classList.add("Marcelo")
-        td9.classList.add("")
+
 
         td11.classList.add("Marcelo")
-        td12.classList.add("")
+
 
     }
     else if (Turma == "1CI" && Dia == "SEX") {
@@ -603,8 +600,8 @@ function tabelinha() {
         td8.classList.add("AnaG")
         td9.classList.add("AnaG")
 
-        td11.classList.add("")
-        td12.classList.add("")
+
+
 
     }
     else if (Turma == "1AA" && Dia == "SEG") {
@@ -656,7 +653,7 @@ function tabelinha() {
         td5.classList.add("Rute")
         td6.classList.add("Rute")
 
-        td8.classList.add("")
+
         td9.classList.add("Daniel")
 
         td11.classList.add("Gaspar")
@@ -678,8 +675,8 @@ function tabelinha() {
         td12.innerText = "QUÍMICA - MARCELA"
 
         td1.classList.add("Chico")
-        td2.classList.add("")
-        td3.classList.add("")
+
+
 
         td5.classList.add("Eletrilha")
         td6.classList.add("Eletrilha")
@@ -703,7 +700,7 @@ function tabelinha() {
         td9.innerText = "TEORIAS E FUNDAMENTOS DA ADMINISTRAÇÃO - SEM PROFESSOR"
 
         td11.innerText = "MATEMÁTICA - JOELSON"
-        td12.innerText = ""
+        td12.innerText = "FILOSOFIA - SEM PROFESSOR"
 
         td1.classList.add("Manuela")
         td2.classList.add("AnaG")
@@ -712,11 +709,10 @@ function tabelinha() {
         td5.classList.add("Manuela")
         td6.classList.add("Manuela")
 
-        td8.classList.add("")
-        td9.classList.add("")
+
+
 
         td11.classList.add("Sorvetinho")
-        td12.classList.add("")
 
     }
     else if (Turma == "1AA" && Dia == "SEX") {
@@ -735,7 +731,7 @@ function tabelinha() {
 
         td1.classList.add("Iara")
         td2.classList.add("Iara")
-        td3.classList.add("")
+
 
         td5.classList.add("Lula")
         td6.classList.add("Marcelo")
@@ -744,10 +740,10 @@ function tabelinha() {
         td9.classList.add("Paulo")
 
         td11.classList.add("Praticas")
-        td12.classList.add("")
+
 
     }
-    else if (Turma == "1AB" && Dia == "SEG") {
+    else if (Turma == "1BA" && Dia == "SEG") {
         td1.innerText = "INFORMÁTICA BÁSICA - MARCELO"
         td2.innerText = "ED.FÍSICA - DANIEL"
         td3.innerText = "QUÍMICA - MARCELA"
@@ -772,10 +768,10 @@ function tabelinha() {
         td9.classList.add("Gaspar")
 
         td11.classList.add("Mariana")
-        td12.classList.add("")
+
 
     }
-    else if (Turma == "1AB" && Dia == "TER") {
+    else if (Turma == "1BA" && Dia == "TER") {
         td1.innerText = "INGLÊS - LUCAS"
         td2.innerText = "ESPANHOL - SEM PROFESSOR"
         td3.innerText = "INFORMÁTICA BÁSICA - MARCELO"
@@ -790,10 +786,10 @@ function tabelinha() {
         td12.innerText = "ORIENTAÇÃO ACADÊMICA - RUTE"
 
         td1.classList.add("Lucas")
-        td2.classList.add("")
+
         td3.classList.add("Marcelo")
 
-        td5.classList.add("")
+
         td6.classList.add("Daniel")
 
         td8.classList.add("Gaspar")
@@ -803,7 +799,7 @@ function tabelinha() {
         td12.classList.add("Rute")
 
     }
-    else if (Turma == "1AB" && Dia == "QUA") {
+    else if (Turma == "1BA" && Dia == "QUA") {
         td1.innerText = "PROJETO DE VIDA - IARA"
         td2.innerText = "PROJETO DE VIDA - IARA"
         td3.innerText = "PORTUGUÊS - ANA GUERRA"
@@ -819,7 +815,7 @@ function tabelinha() {
 
         td1.classList.add("Iara")
         td2.classList.add("Iara")
-        td3.classList.add("")
+
 
         td5.classList.add("Eletrilha")
         td6.classList.add("Eletrilha")
@@ -827,11 +823,11 @@ function tabelinha() {
         td8.classList.add("Sorvetinho")
         td9.classList.add("Sorvetinho")
 
-        td11.classList.add("")
-        td12.classList.add("")
+
+
 
     }
-    else if (Turma == "1AB" && Dia == "QUI") {
+    else if (Turma == "1BA" && Dia == "QUI") {
         td1.innerText = "GEOGRAFIA - PAULO"
         td2.innerText = "BIOLOGIA - MANUELA"
         td3.innerText = "INGLÊS - LUCAS"
@@ -853,13 +849,14 @@ function tabelinha() {
         td6.classList.add("Lula")
 
         td8.classList.add("AnaG")
-        td9.classList.add("Anag")
+        td9.classList.add("AnaG")
 
-        td11.classList.add("")
-        td12.classList.add("")
+
+        td12.classList.add("Marcela")
+
 
     }
-    else if (Turma == "1AB" && Dia == "SEX") {
+    else if (Turma == "1BA" && Dia == "SEX") {
         td1.innerText = "FÍSICA - SEM PROFESSOR"
         td2.innerText = "HISTÓRIA - FRANCISCO"
         td3.innerText = "GEOGRAFIA - PAULO"
@@ -873,11 +870,11 @@ function tabelinha() {
         td11.innerText = "PRÁTICAS EXPERIMENTAIS (1)"
         td12.innerText = "MATEMÁTICA - JOELSON"
 
-        td1.classList.add("")
+
         td2.classList.add("Chico")
         td3.classList.add("Paulo")
 
-        td5.classList.add("")
+        
         td6.classList.add("Lula")
 
         td8.classList.add("Eber")
@@ -898,8 +895,8 @@ function tabelinha() {
         td8.innerText = "FÍSICA - SEM PROFESSOR"
         td9.innerText = "INGLÊS - LUCAS"
 
-        td11.innerText = "EMPREENDEDORISMO - RANAILDO"
-        td12.innerText = "EMPREENDEDORISMO - RANAILDO"
+        td11.innerText = "EMPREENDEDOR -ISMO - RANAILDO"
+        td12.innerText = "EMPREENDEDOR -ISMO - RANAILDO"
 
         td1.classList.add("Eber")
         td2.classList.add("Marcela")
@@ -908,7 +905,7 @@ function tabelinha() {
         td5.classList.add("Iara")
         td6.classList.add("Iara")
 
-        td8.classList.add("")
+
         td9.classList.add("Lucas")
 
         td11.classList.add("Ranaildo")
@@ -939,8 +936,8 @@ function tabelinha() {
         td8.classList.add("Eletrilha")
         td9.classList.add("Eletrilha")
 
-        td11.classList.add("")
-        td12.classList.add("")
+
+
 
     }
     else if (Turma == "2AI" && Dia == "QUA") {
@@ -964,11 +961,13 @@ function tabelinha() {
         td5.classList.add("Eletrilha")
         td6.classList.add("Eletrilha")
 
-        td8.classList.add("")
-        td9.classList.add("")
+        td8.classList.add("JavaScriptMan")
+        td9.classList.add("JavaScriptMan")
 
-        td11.classList.add("")
-        td12.classList.add("")
+        td11.classList.add("Daniel")
+        td12.classList.add("Lula")
+
+
 
     }
     else if (Turma == "2AI" && Dia == "QUI") {
@@ -992,11 +991,11 @@ function tabelinha() {
         td5.classList.add("Linduberg")
         td6.classList.add("Linduberg")
 
-        td8.classList.add("")
+
         td9.classList.add("Praticas")
 
         td11.classList.add("Marcelo")
-        td12.classList.add("")
+
 
     }
     else if (Turma == "2AI" && Dia == "SEX") {
@@ -1007,21 +1006,21 @@ function tabelinha() {
         td5.innerText = "PROGRAMAÇÃO WEB I E II 0 ALLAN"
         td6.innerText = "PROGRAMAÇÃO WEB I E II 0 ALLAN"
 
-        td8.innerText = ""
-        td9.innerText = ""
+        td8.innerText = "ORIENTAÇÃO ACADÊMICA - SEM PROFESSOR"
+        td9.innerText = "ORIENTAÇÃO ACADÊMICA - SEM PROFESSOR"
 
         td11.innerText = "LÓGICA DE PROGRAMAÇÃO - ALLAN"
         td12.innerText = "LÓGICA DE PROGRAMAÇÃO - ALLAN"
 
         td1.classList.add("Manuela")
         td2.classList.add("Manuela")
-        td3.classList.add("")
+
 
         td5.classList.add("JavaScriptMan")
         td6.classList.add("JavaScriptMan")
 
-        td8.classList.add("")
-        td9.classList.add("")
+
+
 
         td11.classList.add("JavaScriptMan")
         td12.classList.add("JavaScriptMan")
@@ -1079,8 +1078,8 @@ function tabelinha() {
         td8.classList.add("Eletrilha")
         td9.classList.add("Eletrilha")
 
-        td11.classList.add("")
-        td12.classList.add("")
+
+
 
     }
     else if (Turma == "2AA" && Dia == "QUA") {
@@ -1094,10 +1093,10 @@ function tabelinha() {
         td8.innerText = "MARKETINK E SERVIÇOS - RUTE"
         td9.innerText = "MARKETINK E SERVIÇOS - RUTE"
 
-        td11.innerText = "EMPREENDEDORISMO - RANAILDO"
-        td12.innerText = "EMPREENDEDORISMO - RANAILDO"
+        td11.innerText = "EMPREENDEDOR -ISMO - RANAILDO"
+        td12.innerText = "EMPREENDEDOR -ISMO - RANAILDO"
 
-        td1.classList.add("")
+
         td2.classList.add("Leonardo")
         td3.classList.add("Ranaildo")
 
@@ -1136,7 +1135,7 @@ function tabelinha() {
         td9.classList.add("Rute")
 
         td11.classList.add("Leonardo")
-        td12.classList.add("")
+
 
     }
     else if (Turma == "2AA" && Dia == "SEX") {
@@ -1155,19 +1154,19 @@ function tabelinha() {
 
         td1.classList.add("Lucas")
         td2.classList.add("Lucas")
-        td3.classList.add("")
+
 
         td5.classList.add("Eber")
         td6.classList.add("Eber")
 
-        td8.classList.add("")
-        td9.classList.add("")
 
-        td11.classList.add("")
-        td12.classList.add("")
+
+
+
+
 
     }
-    else if (Turma == "2AB" && Dia == "SEG") {
+    else if (Turma == "2BA" && Dia == "SEG") {
         td1.innerText = "SISTEMA DE INFORMAÇÃO - RANAILDO"
         td2.innerText = "PROJETO DE VIDA - IARA"
         td3.innerText = "PROJETO DE VIDA - IARA"
@@ -1195,7 +1194,7 @@ function tabelinha() {
         td12.classList.add("Leonardo")
 
     }
-    else if (Turma == "2AB" && Dia == "TER") {
+    else if (Turma == "2BA" && Dia == "TER") {
         td1.innerText = "ORIENTAÇÃO ACADÊMICA - ROSA"
         td2.innerText = "ORIENTAÇÃO ACADÊMICA - ROSA"
         td3.innerText = "SOCIOLOGIA - MARIANA"
@@ -1223,7 +1222,7 @@ function tabelinha() {
         td12.classList.add("Daniel")
 
     }
-    else if (Turma == "2AB" && Dia == "QUA") {
+    else if (Turma == "2BA" && Dia == "QUA") {
         td1.innerText = "SISTEMA DE INFORMAÇÃO - RANAILDO"
         td2.innerText = "SISTEMA DE INFORMAÇÃO - RANAILDO"
         td3.innerText = "ARTE - LULA"
@@ -1244,16 +1243,16 @@ function tabelinha() {
         td5.classList.add("Eletrilha")
         td6.classList.add("Eletrilha")
 
-        td8.classList.add("")
-        td9.classList.add("")
+
+
 
         td11.classList.add("Rute")
         td12.classList.add("Rute")
 
     }
-    else if (Turma == "2AB" && Dia == "QUI") {
-        td1.innerText = "EMPREENDEDORISMO - RANAILDO"
-        td2.innerText = "EMPREENDEDORISMO - RANAILDO"
+    else if (Turma == "2BA" && Dia == "QUI") {
+        td1.innerText = "EMPREENDEDOR -ISMO - RANAILDO"
+        td2.innerText = "EMPREENDEDOR -ISMO - RANAILDO"
         td3.innerText = "METODOLOGIA DO TRABALHO CIENTÍFICO (MTC) - LINDEMBERG"
 
         td5.innerText = "HISTÓRIA - IARA"
@@ -1270,7 +1269,7 @@ function tabelinha() {
         td3.classList.add("Linduberg")
 
         td5.classList.add("Iara")
-        td6.classList.add("")
+
 
         td8.classList.add("Paulo")
         td9.classList.add("Praticas")
@@ -1279,7 +1278,7 @@ function tabelinha() {
         td12.classList.add("Rute")
 
     }
-    else if (Turma == "2AB" && Dia == "SEX") {
+    else if (Turma == "2BA" && Dia == "SEX") {
         td1.innerText = "Oficinas (UC1) - PAULO"
         td2.innerText = "Oficinas (UC1) - PAULO"
         td3.innerText = "INGLÊS - LUCAS"
@@ -1297,14 +1296,14 @@ function tabelinha() {
         td2.classList.add("Paulo")
         td3.classList.add("Lucas")
 
-        td5.classList.add("")
-        td6.classList.add("")
+        
 
-        td8.classList.add("")
-        td9.classList.add("")
 
-        td11.classList.add("")
-        td12.classList.add("")
+
+
+
+
+
 
     }
     else if (Turma == "3AI" && Dia == "SEG") {
@@ -1331,8 +1330,8 @@ function tabelinha() {
         td8.classList.add("Lucas")
         td9.classList.add("Marcela")
 
-        td11.classList.add("")
-        td12.classList.add("")
+
+
 
     }
     else if (Turma == "3AI" && Dia == "TER") {
@@ -1347,7 +1346,7 @@ function tabelinha() {
         td9.innerText = "ORIENTAÇÃO ACADÊMICA - SEM PROFESSOR"
 
         td11.innerText = "TRILHAS (UC1) - MAT/CH - MARIANA"
-        td12.innerText = "TRILHAS (UC1) - MAT/CH - LEONARDO" 
+        td12.innerText = "TRILHAS (UC1) - MAT/CH - LEONARDO"
 
         td1.classList.add("Leonardo")
         td2.classList.add("Daniel")
@@ -1356,8 +1355,8 @@ function tabelinha() {
         td5.classList.add("Mariana")
         td6.classList.add("Mariana")
 
-        td8.classList.add("")
-        td9.classList.add("")
+
+
 
         td11.classList.add("Eletrilha")
         td12.classList.add("Eletrilha")
@@ -1406,8 +1405,8 @@ function tabelinha() {
         td12.innerText = "TRILHAS (UC3) MAT/CH - LEONARDO"
 
         td1.classList.add("Chico")
-        td2.classList.add("")
-        td3.classList.add("Pratias")
+        
+        td3.classList.add("Praticas")
 
         td5.classList.add("Eletrilha")
         td6.classList.add("Eletrilha")
@@ -1443,8 +1442,8 @@ function tabelinha() {
         td8.classList.add("JavaScriptMan")
         td9.classList.add("JavaScriptMan")
 
-        td11.classList.add("")
-        td12.classList.add("")
+
+
 
     }
     else if (Turma == "3BI" && Dia == "SEG") {
@@ -1471,8 +1470,8 @@ function tabelinha() {
         td8.classList.add("Nancy")
         td9.classList.add("Nancy")
 
-        td11.classList.add("")
-        td12.classList.add("")
+
+
 
     }
     else if (Turma == "3BI" && Dia == "TER") {
@@ -1497,7 +1496,7 @@ function tabelinha() {
         td6.classList.add("JavaScriptMan")
 
         td8.classList.add("Leonardo")
-        td9.classList.add("")
+
 
         td11.classList.add("Eletrilha")
         td12.classList.add("Eletrilha")
@@ -1518,7 +1517,7 @@ function tabelinha() {
         td12.innerText = "BANCO DE DADOS - ALLAN"
 
         td1.classList.add("Praticas")
-        td2.classList.add("")
+        
         td3.classList.add("Daniel")
 
         td5.classList.add("Eletrilha")
@@ -1545,7 +1544,7 @@ function tabelinha() {
         td11.innerText = "TRILHAS (UC1) LING/CH - SEM PROFESSOR"
         td12.innerText = "TRILHAS (UC3) LING/CH - PAULO"
 
-        td1.classList.add("")
+
         td2.classList.add("Lucas")
         td3.classList.add("Praticas")
 
@@ -1583,8 +1582,8 @@ function tabelinha() {
         td8.classList.add("Leonardo")
         td9.classList.add("Marcelo")
 
-        td11.classList.add("")
-        td12.classList.add("")
+
+
 
     }
     else if (Turma == "3AA" && Dia == "SEG") {
@@ -1612,7 +1611,7 @@ function tabelinha() {
         td9.classList.add("Mariana")
 
         td11.classList.add("Praticas")
-        td12.classList.add("")
+
 
     }
     else if (Turma == "3AA" && Dia == "TER") {
@@ -1639,8 +1638,9 @@ function tabelinha() {
         td8.classList.add("Rute")
         td9.classList.add("Rute")
 
-        td11.classList.add("")
-        td12.classList.add("")
+        td11.classList.add("Eletrilha")
+        td12.classList.add("Eletrilha")
+
 
     }
     else if (Turma == "3AA" && Dia == "QUA") {
@@ -1687,7 +1687,7 @@ function tabelinha() {
 
         td1.classList.add("Lula")
         td2.classList.add("Marcela")
-        td3.classList.add("")
+
 
         td5.classList.add("Eletrilha")
         td6.classList.add("Eletrilha")
@@ -1714,20 +1714,20 @@ function tabelinha() {
         td12.innerText = "OFICINAS (UC2) - SEM PROFESSOR"
 
         td1.classList.add("Marcela")
-        td2.classList.add("")
+        
         td3.classList.add("Eber")
 
         td5.classList.add("Manuela")
         td6.classList.add("Manuela")
 
-        td8.classList.add("")
-        td9.classList.add("")
 
-        td11.classList.add("")
-        td12.classList.add("")
+
+
+
+
 
     }
-    else if (Turma == "3AB" && Dia == "SEG") {
+    else if (Turma == "3BA" && Dia == "SEG") {
         td1.innerText = "MÉTODOS E TÉCNICAS ADMINISTRATIVAS - GASPAR"
         td2.innerText = "HISTÓRIA - FRANCISCO"
         td3.innerText = "INGLÊS - LUCAS"
@@ -1755,7 +1755,7 @@ function tabelinha() {
         td12.classList.add("Rosa")
 
     }
-    else if (Turma == "3AB" && Dia == "TER") {
+    else if (Turma == "3BA" && Dia == "TER") {
         td1.innerText = "GESTÃO DA PRODUÇÃO E LOGÍSTICA - RUTE"
         td2.innerText = "GESTÃO DA PRODUÇÃO E LOGÍSTICA - RUTE"
         td3.innerText = "CONTABILIDADE GERAL - ROSA"
@@ -1782,7 +1782,7 @@ function tabelinha() {
         td11.classList.add("Eletrilha")
         td12.classList.add("Eletrilha")
 
-    }else if (Turma == "3AB" && Dia == "QUA") {
+    } else if (Turma == "3BA" && Dia == "QUA") {
         td1.innerText = "PRÁTICAS EXPERIMENTAIS (1)"
         td2.innerText = "GESTÃO DE PRODUÇÃO E LOGÍSTICA - RUTE"
         td3.innerText = "GESTÃO DE PRODUÇÃO E LOGÍSTICA - RUTE"
@@ -1809,7 +1809,7 @@ function tabelinha() {
         td11.classList.add("Eber")
         td12.classList.add("Eber")
 
-    }else if (Turma == "3AB" && Dia == "QUI") {
+    } else if (Turma == "3BA" && Dia == "QUI") {
         td1.innerText = "ESPANHOL - SEM PROFESSOR"
         td2.innerText = "ARTE - LULA"
         td3.innerText = "QUÍMICA - MARCELA"
@@ -1823,20 +1823,20 @@ function tabelinha() {
         td11.innerText = "TRILHAS (UC3) MAT/CN - RAFAEL"
         td12.innerText = "TRILHAS (UC3) MAT/CN - JOELSON"
 
-        td1.classList.add("")
+
         td2.classList.add("Lula")
         td3.classList.add("Marcela")
 
         td5.classList.add("Eletrilha")
         td6.classList.add("Eletrilha")
 
-        td8.classList.add("")
+
         td9.classList.add("Praticas")
 
         td11.classList.add("Eletrilha")
         td12.classList.add("Eletrilha")
 
-    }else if (Turma == "3AB" && Dia == "SEX") {
+    } else if (Turma == "3BA" && Dia == "SEX") {
         td1.innerText = "MATEMÁTICA - LEONARDO"
         td2.innerText = "MATEMÁTICA - LEONARDO"
         td3.innerText = "ESPANHOL - SEM PROFESSOR"
@@ -1852,17 +1852,16 @@ function tabelinha() {
 
         td1.classList.add("Leonardo")
         td2.classList.add("Leonardo")
-        td3.classList.add("")
+
 
         td5.classList.add("Oficina")
         td6.classList.add("Oficina")
 
-        td8.classList.add("")
-        td9.classList.add("")
 
-        td11.classList.add("")
-        td12.classList.add("")
+
+
+
+
 
     }
 }
-
