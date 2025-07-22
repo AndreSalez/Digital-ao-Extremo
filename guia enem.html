@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=0, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src="JS.js"></script>
+</head>
+
+<body>
+        <!--barra de navegação superior-->
+    <nav id="nav">
+        <div class="btn-expandir">
+            <i class="bi bi-list" id="btn-exp"></i>
+            <a href="index.html" class="portal-tlt"> Portal CEEP </a>
+        </div>
+        
+        <input type="text" class="pesquisa" placeholder="Pesquisar...">
+    </nav>
+
+    <!--navegação do menu-->
+    <nav class="side-menu">
+        <ul class="menu-list">
+            <li class="menu-item">
+                <a href="index.html">
+                    <span class="menu-icon"> <i class="bi bi-house"></i> </span>
+                    <span class="menu-txtlink"> Inicio </span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="index.html">
+                    <span class="menu-icon"> <i class="bi bi-chat-dots-fill"></i> </span>
+                    <span class="menu-txtlink"> Sobre </span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="horarios.html">
+                    <span class="menu-icon"> <i class="bi bi-clock"></i> </span>
+                    <span class="menu-txtlink"> Horários </span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="cardapio.html">
+                    <span class="menu-icon"> <i class="bi bi-fork-knife"></i> </span>
+                    <span class="menu-txtlink"> Cardapio </span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="index.html">
+                    <span class="menu-icon"> <i class="bi bi-book"></i> </span>
+                    <span class="menu-txtlink"> Estudos </span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="index.html">
+                    <span class="menu-icon"> <i class="bi bi-person-workspace"></i> </span>
+                    <span class="menu-txtlink"> Gestão </span>
+                </a>
+            </li>
+        </ul>
+        <div class="theme-toggle-container">
+            <input type="checkbox" id="theme-toggle" class="theme-toggle">
+            <label for="theme-toggle" class="theme-toggle-label">
+                <div class="sun">
+                </div>
+                <div class="moon">
+                    <div class="star"></div>
+                    <div class="star-small"></div>
+                </div>
+            </label>
+        </div>
+    </nav>
+
+    <!--Conteúdo Enem-->
+    <main class="enem-main">
+        <div class="enem-container">
+            <img src="https://unifametro.edu.br/wp-content/uploads/2025/05/enem-1024x576-1.webp" class="enem-logo" width="300px">
+            <div class="enem-content">
+                <div class="enem-text">
+                    <h1> Oque é o ENEM?</h1>
+                    <p> O Exame Nacional do Ensino Médio (ENEM) é um exame feito anualmente para avaliar o desempenho de
+                        estudantes que estão finalizando o ensino medio, e que desejam entrar para o ensino superior.</p>
+                        <br>
+                    <p> Por meio da nota do ENEM, os alunos da rede pública podem participar de
+                        programas governamentais que facilitam o ingresso em instituições de ensino superior. Um dos
+                        principais programas é o SISU (Sistema de Seleção Unificada), que oferece vagas em universidades públicas
+                        de todo o país com base no desempenho no exame.</p>
+                        <br>
+                    <h1> Como me inscrever? </h1>
+                    <p> Você pode realizar a sua inscrição no enem atravez do site 
+                        <a href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem" class="link-enem">ENEM.INEP.GOB.BR</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="JS.js"></script>
+    <script src="menu function.js"></script>
+</body>
+
+</html>

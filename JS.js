@@ -1,108 +1,39 @@
-function menu() {
-    var itens = document.createElement("div");
-    var nav = document.getElementById("nav").appendChild(itens);
+//expandir menu
+    var toggleContainer = document.querySelector('.theme-toggle-container');
+    var toggleInput = document.querySelector('.theme-toggle')
+    var toggleLabel = document.querySelector('.theme-toggle-label')
+    var iconeSol = document.querySelector('.sun')
+    var iconeLua = document.querySelector('.moon')
+    var star1 = document.querySelector('.star')
+    var star2 = document.querySelector('.star-small')
 
-    itens.classList.add("menu");
+    toggleInput.addEventListener("change", function () {
+        document.body.classList.toggle("dark-theme");
 
-    var ul = document.createElement("ul");
-    ul.classList.add("nav-list");
+        var nav = document.getElementById("nav");
+        nav.classList.toggle("dark-theme");         // Apenas adiciona ou remove a classe 'dark-theme'
 
-    ///Adicionado link0 para a pagina index///
+        var header = document.querySelector("header");
+        header.classList.toggle("dark-theme");
 
-    var li0 = document.createElement("li");
-    var li1 = document.createElement("li");
-    var li2 = document.createElement("li");
-    var li3 = document.createElement("li");
-    var li4 = document.createElement("li");
-
-    var link0 = document.createElement("a");
-    var link1 = document.createElement("a");
-    var link2 = document.createElement("a");
-    var link3 = document.createElement("a");
-    var link4 = document.createElement("a");
-
-
-    ul.appendChild(li0);
-    ul.appendChild(li1);;
-    ul.appendChild(li2);
-    ul.appendChild(li3);
-    ul.appendChild(li4);
-
-    li0.appendChild(link0);
-    li1.appendChild(link1);
-    li2.appendChild(link2);
-    li3.appendChild(link3);
-    li4.appendChild(link4);
-
-
-    link0.innerText = "Home";
-    link0.href = "index.html";
-
-    link1.innerText = "sobre";
-    link1.href = "sobre.html";
-
-    link2.innerText = "Horários";
-    link2.href = "horarios.html";
-
-    link3.innerText = "Cardápio";
-    link3.href = "cardapio.html";
-
-    link4.innerText = "area de estudo";
-    link4.href = "areaestudo.html";
-
-    itens.appendChild(ul);
-
-
-    var conteinerclosebotao = document.createElement("div");
-    conteinerclosebotao.classList.add("close-conteiner");
-
-    var closebotao = document.createElement("div");
-
-    conteinerclosebotao.appendChild(closebotao)
-    itens.appendChild(conteinerclosebotao);
-
-    closebotao.innerText = "X";
-    closebotao.classList.add("menu-close");
-
-    closebotao.onclick = function () {
         var menu = document.querySelector(".menu");
-
-        itens.style.animation = "fade-out 0.5s ease forwards";
-        setTimeout(() => { menu.remove(); }, 500);
-    }
-
-    itens.appendChild(closebotao);
-    itens.appendChild(ul);
-
-    ul.appendChild(li1);
-    ul.appendChild(li2);
-    ul.appendChild(li3);
-    ul.appendChild(li4);
-    ul.classList.add("nav-list");
-
-    document.addEventListener("click", function (event) {
-        var menu = document.querySelector(".menu");
-        var burguer = document.querySelector(".burguer");
-
-        if (menu && !menu.contains(event.target) && !burguer.contains(event.target)) {
-            menu.style.animation = "fade-out 0.5s ease forwards";
-            setTimeout(() => { menu.remove(); }, 500);
+        if (menu) {
+            menu.classList.toggle("dark-theme");
         }
 
-    }
-    )
 
-}
+    });
 
 
+    const sun = document.querySelector('.sun')
+    const moon = document.querySelector('.moon')
+    const button = document.querySelector('.container')
 
-function tabhorario() {
+    button.addEventListener('click', () => {
+        sun.classList.toggle('visible')
+        moon.classList.toggle('visible')
+    })
 
-    var conteinerseletor = document.getElementById("select-cont");
-    conteinerseletor.style.animation = "deladin 0.5s ease-out forwards"
-    setTimeout(tabelinha, 500)
-
-}
 
 function tabelinha() {
     var flexcont = document.getElementsByClassName("flexconteiner")
@@ -139,13 +70,17 @@ function tabelinha() {
     var td11 = document.createElement("td")
     var td12 = document.createElement("td")
 
-
-    td4.innerText = "Lanche - 10:00h - 10:20h"
-
+    td1.innerText = "EXEMPLO"
+    td2.innerText = "balabalba"
+    td3.innerText = "balabalba"
+    td4.innerText = "lanche - 10:00h - 10:20h"
+    td6.innerText = ""
     td7.innerText = "ALMOÇO"
-
-    td10.innerText = "Lanche- 15:00h - 15:20h"
-
+    td8.innerText = ""
+    td9.innerText = ""
+    td10.innerText = "LAnche- 15:00h - 15:20h"
+    td11.innerText = "balabalba"
+    td12.innerText = "balabalba"
 
     tr1.appendChild(td1)
     tr2.appendChild(td2)
@@ -566,7 +501,7 @@ function tabelinha() {
         td2.classList.add("Nancy")
         td3.classList.add("Nancy")
 
-        
+
         td6.classList.add("AnaG")
 
         td8.classList.add("Marcelo")
@@ -874,7 +809,7 @@ function tabelinha() {
         td2.classList.add("Chico")
         td3.classList.add("Paulo")
 
-        
+
         td6.classList.add("Lula")
 
         td8.classList.add("Eber")
@@ -1296,7 +1231,7 @@ function tabelinha() {
         td2.classList.add("Paulo")
         td3.classList.add("Lucas")
 
-        
+
 
 
 
@@ -1405,7 +1340,7 @@ function tabelinha() {
         td12.innerText = "TRILHAS (UC3) MAT/CH - LEONARDO"
 
         td1.classList.add("Chico")
-        
+
         td3.classList.add("Praticas")
 
         td5.classList.add("Eletrilha")
@@ -1517,7 +1452,7 @@ function tabelinha() {
         td12.innerText = "BANCO DE DADOS - ALLAN"
 
         td1.classList.add("Praticas")
-        
+
         td3.classList.add("Daniel")
 
         td5.classList.add("Eletrilha")
@@ -1714,7 +1649,7 @@ function tabelinha() {
         td12.innerText = "OFICINAS (UC2) - SEM PROFESSOR"
 
         td1.classList.add("Marcela")
-        
+
         td3.classList.add("Eber")
 
         td5.classList.add("Manuela")
@@ -1856,12 +1791,6 @@ function tabelinha() {
 
         td5.classList.add("Oficina")
         td6.classList.add("Oficina")
-
-
-
-
-
-
 
     }
 }
