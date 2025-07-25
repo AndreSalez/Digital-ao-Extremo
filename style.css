@@ -1,102 +1,201 @@
 * {
+    transition: 0.7s;
     padding: 0;
     margin: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    box-sizing: border-box;
+
 }
 
-body {
-    height: 100vh;
+a {
+    color: #fff;
+    text-transform: uppercase;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: 4px;
+    text-decoration: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Escurece com transparência */
+    z-index: 9;
+    /* Deve estar abaixo do menu */
+    display: none;
+    /* Inicialmente escondido */
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+
+    }
+
+    to {
+        opacity: 1;
+
+    }
+
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+
+    }
+
+    to {
+        opacity: 0;
+
+    }
+
 }
 
 #nav {
-    align-items: center;
-    position: fixed;
-    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
     background-color: #f7f7f7;
     height: 8vh;
     border-bottom-color: #a80909;
     border-bottom-style: groove;
-    z-index: 1;
+    position: relative;
 
 }
 
-.portal-tlt {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #1e1e1e;
-}
-a {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.nav-list {
+    gap: 5px;
+    align-items: baseline;
+    list-style: none;
+    flex-direction: column;
+    display: flex;
+    padding: 10px;
+    padding-left: 0;
+    justify-content: space-around;
     text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 4px;
-    color: #fff;
-}
-
-nav.side-menu {
-    position: fixed;
-    width: 0px;
-    height: 100%;
-    background-color: #d4d4d4;
-    overflow: hidden;
-    transition: .3s;
-    padding-top: 10vh;
-}
-
-nav.side-menu.expandir {
     width: 300px;
-    padding: 10vh 0 40px 1%;
+    overflow: hidden;
+
+
 }
 
-.btn-expandir > i {
-    font-size: 30px;
-}
-.btn-expandir {
-    padding: 20px 4%;
-    cursor: pointer;
-    color: #1e1e1e;
-    font-size: 30px;
-}
-
-.side-menu .txtmenu {
-    cursor: pointer;
-    margin-left: 50px;
-    font-size: 30px;
-    color: #1e1e1e;
+.nav-list li {
+    width: 100%;
+    transition: 0.7s;
+    letter-spacing: 4px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 10px;
 }
 
-.menu-list {
-    list-style-type: none;
-}
-
-.menu-list li> a {
+.nav-list li > a {
+    border-radius: 10px;
     font-size: 20px;
-    color: #1e1e1e;
-    padding: 20px 4%;
+    color: #122333;
+    padding: 20px 4% ;
     display: flex;
     line-height: 40px;
-}
-.menu-list li> a.expandir {
-    margin-left: 10px;
-}
-
-.menu-list .menu-txtlink {
-    margin-left: 40px;
-}
-
-.menu-list .menu-icon>i {
-    font-size: 30px;
+    transition: 1s;
 }
 
 .menu-list li>a:hover {
     transition: 0.5s;
     background-color: #3c5b79;
+    font-size: 22px;
+}
+
+.nav-list li:hover a {
+    font-size: 22px;
     border-radius: 10px;
-    font-size: 23px;
+    color: #f7f7f7;
+    text-decoration: none;
+    background-color: #122333;
+    transition: 0.5s ease;
+}
+
+
+.burguer {
+
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+}
+
+.burguer div {
+    width: 32px;
+    height: 4px;
+    margin: 4px;
+    transition: 0.7s;
+    border-radius: 5px;
+}
+
+.burguer div:nth-child(1) {
+    background: #f10f10
+        /* Cor 1 baseada na logo */
+}
+
+.burguer div:nth-child(2) {
+    background: #f10f10;
+    /* Cor 2 baseada na logo */
+}
+
+.burguer div:nth-child(3) {
+    background: #f10f10;
+    /* Cor 3 baseada na logo */
+}
+
+.menu {
+    background-color: #f7f7f7;
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    animation: slide-in 0.5s ease forwards;
+}
+
+
+
+.menu li:hover {
+    color: #f7f7f7;
+    background-color: #122333;
+}
+
+body {
+    background-color: #c2c2c2;
+}
+
+.menu-close {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    background-color: #490b2d;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-weight: bold;
+
+
+}
+
+
+.menutext {
+
+    font-weight: bold;
+    color: #0b40bd;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .close-conteiner {
@@ -276,7 +375,7 @@ nav.side-menu.expandir {
     height: 500px;
     background-color: #122333;
     margin-right: 0;
-    margin-left: 550px;
+    margin-left: 600px;
     margin-top: 40px;
     border: solid #2a3e52;
     border-radius: 9px;
@@ -303,7 +402,6 @@ nav.side-menu.expandir {
     margin: 20px;
     border: 1px solid #2a3e52;
 
-
 }
 
 .tabelaCardapio td {
@@ -314,7 +412,7 @@ nav.side-menu.expandir {
     font-weight: bold;
 }
 
-
+/*CORES DOS PROFESSORES NA TABELA DE HORARIO*/
 .Lucas {
     background-color: #cccab4;
 }
@@ -490,6 +588,139 @@ nav.side-menu.expandir {
 }
 
 
+
+
+/*//Responzívidaddy//*/
+
+@media (max-width: 999px) {
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: #122333;
+        height: 8dvh;
+        border-bottom: groove #490b2d;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        display: flex;
+        text-transform: uppercase;
+        width: 285px;
+        overflow: hidden;
+        border: solid #490b2d;
+    }
+
+    .nav-list li {
+        width: 100%;
+        transition: 0.7s;
+        letter-spacing: 4px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        border-radius: 10px;
+    }
+
+    .nav-list li > a {
+        border-radius: 10px;
+        font-size: 20px;
+        color: #122333;
+        padding: 20px 4% ;
+        display: flex;
+        line-height: 40px;
+        transition: 1s;
+    }
+    
+    .menu-list li > a:hover {
+        transition: 0.5s;
+        background-color: #3c5b79;
+        font-size: 22px;
+    }
+    
+    .nav-list li:hover a {
+        font-size: 22px;
+        border-radius: 10px;
+        color: #f7f7f7;
+        text-decoration: none;
+        background-color: #122333;
+        transition: 0.5s ease;
+    }
+    
+    .burguer {
+
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    .burguer div {
+
+        width: 32px;
+        height: 2px;
+        background: #fff;
+        margin: 8px;
+        transition: 0.7s;
+    }
+
+    .menu {
+        width: 300px;
+        height: 1000px;
+        position: absolute;
+    }
+
+    .menu li:hover {
+        color: #122333;
+        background-color: #fff;
+    }
+
+    body {
+        background-color: #c2c2c2;
+    }
+
+    .menu-close {
+        position: absolute;
+        top: 10px;
+        left: 15px;
+        font-size: 24px;
+        color: #fff;
+        cursor: pointer;
+        background-color: #490b2d;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        font-weight: bold;
+
+
+    }
+
+    .close-conteiner {
+        width: 300px;
+        height: 8vh;
+
+    }
+
+    .slogan h1 {
+        font-size: 45px !important;
+        margin-top: 3px !important;
+        margin-right: 1px !important;
+    }
+
+    .slogan h2 {
+        margin-right: 7px !important;
+        margin-top: 1px !important;
+    }
+
+    .logotext {
+        font-size: 30px !important;
+        color: #490b2d !important;
+        margin-right: 10px !important;
+        margin-top: 1px !important;
+
+    }
+
+}
 /* TEMA ESCURO*/
 
 .theme-toggle-container {
@@ -515,7 +746,9 @@ nav.side-menu.expandir {
 
 /* Tema escuro */
 body.dark-theme {
-    background-color: #122333;
+    background: linear-gradient(to right, #121212, #333);
+    background-size: 200% 100%;
+    animation: theme-transition 0.5s ease forwards;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -533,6 +766,14 @@ nav.dark-theme {
     /* Cor escura */
     color: #ffffff;
     /* Texto claro */
+}
+
+.menu.dark-theme .sun{
+    display: none;
+}
+
+.menu.dark-theme moon{
+
 }
 
 /* Tema escuro para os itens do menu */
@@ -560,7 +801,7 @@ header.dark-theme {
     /* Cor escura */
     color: #ffffff;
     /* Texto claro */
-    border-bottom: groove #333;
+
     /* Borda escura */
 }
 
@@ -643,52 +884,199 @@ header.dark-theme {
 
 
 
+/* Estilo padrão para theme-text */
 .theme-text {
     font-size: 16px;
     color: #122333;
+    /* Cor padrão para tema claro */
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-.theme-toggle:checked+.theme-toggle-label .theme-text {
+/* Estilo padrão para theme-text */
+.theme-text {
+    font-size: 16px;
+    color: #122333;
+    /* Cor padrão para tema claro */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Links no tema escuro */
+body.dark-theme a {
     color: #f7f7f7;
-    /* Cor para o tema escuro */
+    /* Cor clara para tema escuro */
+}
+
+/* theme-text no tema escuro */
+body.dark-theme .theme-text {
+    color: #f7f7f7;
+    /* Cor clara para tema escuro */
 }
 
 nav.dark-theme {
-    background-color: #121212;
+    transition: 0.7s;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    height: 8vh;
+    position: relative;
+    background-color: #121212 !important;
     /* Cor escura */
     border-bottom: groove #333;
     /* Borda escura */
     color: #ffffff;
     /* Texto claro */
+    box-shadow: 0px 4px 10px 0px #a80909, 0px -4px 10px 0px rgba(255, 0, 0, 0.5);
+    /* Efeito de luz */
+
 }
-.enem-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0 100px 0 100px;
+
+.menu.dark-theme .nav-list li:hover {
+    color: #ffffff;
+    background: linear-gradient(to right, #121212, #333);
+    background-size: 200% 100%;
+    animation: theme-transition 0.5s ease forwards;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
-.enem-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.menu.dark-theme a::hover {
+background-color: #1e1e1e
 }
-.enem-content {
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    text-align: left;
+
+@keyframes theme-transition {
+    from {
+        background-position: 100% 0;
+    }
+
+    to {
+        background-position: 0 0;
+    }
 }
-.enem-logo {
-    border-radius: 10px;
-    box-shadow: black;
+
+.sugestao {
+    position: absolute;
+    top: 60px;
+    left: 15%;
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
-.enem-text {
+
+.sugestao-item {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+.sugestao-item:hover {
+    background-color: #f0f0f0;
+}
+
+.errotexto {
+    position: absolute;
+    top: 300px;
+    left: 30%;
+    width: 600px;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    padding: 10px;
+    color: #ff0000;
+    z-index: 1000;
+    text-transform: uppercase;
+}
+
+.errotexto h1 {
+    font-size: 50px;
+    color: #ff0000;
+}
+
+.errotexto h2 {
+    font-size: 17px;
+    color: #490b0b;
+}
+
+#sugestaoContainer {
+
+    left: 1324px;
+
+    width: 300px;
+    /* Faz com que as sugestões tenham a mesma largura do input */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none;
+    /* Inicialmente escondido */
+}
+
+body.dark-theme #sugestaoContainer {
+
+    left: 1324px;
+    width: 300px;
+    background-color: #444444 !important;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+    display: none;
+    /* Inicialmente escondido */
+}
+
+body.dark-theme .sugestao-item:hover {
+
+    color: #000000;
+}
+
+body.dark-theme .selectors-conteiner {
+
+    background-color: #3b414f !important;
+    border: solid #cecece !important;
+
+
+}
+
+@font-face {
+    font-family: Holborn;
+    src: url(font/Holborn.ttf) format('ttf'),
+        url(font/Holborn.otf) format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.slogan {
+
+    font-family: Holborn;
+}
+
+.slogan h1 {
+    font-size: 70px;
+    color: #c90202;
+    text-align: center;
+    margin-top: 300px;
+    font-weight: bold;
+    margin-right: 1000px;
+    text-transform: uppercase;
+}
+
+.slogan h2 {
+    margin-right: 895px;
     font-size: 20px;
+    color: #11283d;
+    text-align: center;
+    margin-top: 1px;
+    font-weight: bold;
 }
-.link-enem {
-    text-decoration: none;
-    color: #5900ff;
+
+body.dark-theme .slogan h1 {
+    color: #c90202 !important;
+}
+
+body.dark-theme .slogan h2 {
+    color: #dbdbdb !important;
 }
