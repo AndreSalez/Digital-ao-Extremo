@@ -1,11 +1,195 @@
-//expandir menu
-    var toggleContainer = document.querySelector('.theme-toggle-container');
-    var toggleInput = document.querySelector('.theme-toggle')
-    var toggleLabel = document.querySelector('.theme-toggle-label')
-    var iconeSol = document.querySelector('.sun')
-    var iconeLua = document.querySelector('.moon')
-    var star1 = document.querySelector('.star')
-    var star2 = document.querySelector('.star-small')
+function menu() {
+    var overlay = document.createElement("div");
+    overlay.classList.add("overlay");
+    document.body.appendChild(overlay);
+
+    overlay.style.display = "block"; // Exibe o overlay
+    overlay.style.animation = "fadein 0.5s ease forwards"
+
+
+
+    var itens = document.createElement("div");
+    var nav = document.getElementById("nav").appendChild(itens);
+
+    itens.classList.add("menu");
+
+
+    var ul = document.createElement("ul");
+    ul.classList.add("nav-list");
+
+
+
+    ///VERIFICAÇÂO FODONA///
+    if (document.body.classList.contains("dark-theme")) {
+        itens.classList.add("dark-theme");
+    }
+
+
+    ///Adicionado link0 para a pagina index///
+
+    var li0 = document.createElement("li");
+    var li1 = document.createElement("li");
+    var li2 = document.createElement("li");
+    var li3 = document.createElement("li");
+    var li4 = document.createElement("li");
+    var li5 = document.createElement("li");
+    var li6 = document.createElement("li");
+
+    var link0 = document.createElement("a");
+    var link1 = document.createElement("a");
+    var link2 = document.createElement("a");
+    var link3 = document.createElement("a");
+    var link4 = document.createElement("a");
+    var link5 = document.createElement("a");
+    var link6 = document.createElement("a");
+    
+    var span0 = document.createElement("span");
+    var span1 = document.createElement("span");
+    var span2 = document.createElement("span");
+    var span3 = document.createElement("span");
+    var span4 = document.createElement("span");
+    var span5 = document.createElement("span");
+    var span6 = document.createElement("span");
+
+
+
+    ul.appendChild(li0);
+    ul.appendChild(li1);;
+    ul.appendChild(li2);
+    ul.appendChild(li3);
+    ul.appendChild(li4);
+    ul.appendChild(li5);
+    ul.appendChild(li6);
+
+    li0.appendChild(link0);
+    li1.appendChild(link1);
+    li2.appendChild(link2);
+    li3.appendChild(link3);
+    li4.appendChild(link4);
+    li5.appendChild(link5);
+    li6.appendChild(link6);
+
+    link0.appendChild(span0)
+    link1.appendChild(span1)
+    link2.appendChild(span2)
+    link3.appendChild(span3)
+    link4.appendChild(span4)
+    link5.appendChild(span5)
+    link6.appendChild(span6)
+
+
+    span0.innerText = "Início";
+    link0.href = "index.html";
+
+    span1.innerText = "sobre";
+    link1.href = "sobre.html";
+
+    span2.innerText = "Horários";
+    link2.href = "horarios.html";
+
+    span3.innerText = "Cardápio";
+    link3.href = "cardapio.html";
+
+    span4.innerText = "area de estudo";
+    link4.href = "areaestudo.html";
+
+    span5.innerText = "Gestão e Professores";
+    link5.href = "gestao.html";
+
+    span6.innerText = "Guia Para O Enem";
+    link6.href = "guiaTreineiro.html";
+
+    itens.appendChild(ul);
+
+
+
+
+
+
+    var conteinerclosebotao = document.createElement("div");
+    conteinerclosebotao.classList.add("close-conteiner");
+
+    var closebotao = document.createElement("div");
+
+    conteinerclosebotao.appendChild(closebotao)
+    itens.appendChild(conteinerclosebotao);
+
+    closebotao.innerText = "X";
+    closebotao.classList.add("menu-close");
+
+
+    closebotao.onclick = function () {
+        var menu = document.querySelector(".menu");
+
+        itens.style.animation = "slide-out 0.5s ease forwards";
+        overlay.style.animation = "fadeOut 0.5s ease forwards";
+        setTimeout(() => { menu.remove(); overlay.remove(); }, 500);
+
+
+    }
+
+    itens.appendChild(closebotao);
+    itens.appendChild(ul);
+
+    ul.appendChild(li1);
+    ul.appendChild(li2);
+    ul.appendChild(li3);
+    ul.appendChild(li4);
+    ul.classList.add("nav-list");
+
+    document.addEventListener("click", function (event) {
+        var menu = document.querySelector(".menu");
+        var burguer = document.querySelector(".burguer");
+
+        if (menu && !menu.contains(event.target) && !burguer.contains(event.target)) {
+            menu.style.animation = "slide-out 0.5s ease forwards";
+            overlay.style.animation = "fadeOut 0.5s ease forwards";
+            setTimeout(() => { menu.remove(); overlay.remove() }, 500);
+        }
+
+    }
+    )
+
+    var toggleContainer = document.createElement("div");
+    toggleContainer.classList.add("theme-toggle-container");
+
+    var toggleInput = document.createElement("input");
+    toggleInput.type = "checkbox";
+    toggleInput.id = "theme-toggle";
+    toggleInput.classList.add("theme-toggle");
+
+    var toggleLabel = document.createElement("label");
+    toggleLabel.setAttribute("for", "theme-toggle");
+    toggleLabel.classList.add("theme-toggle-label");
+
+    var iconeSol = document.createElement("div");
+    iconeSol.classList.add("sun");
+
+    var iconeLua = document.createElement("div");
+    iconeLua.classList.add("moon");
+    var star1 = document.createElement("div");
+    star1.classList.add("star");
+    var star2 = document.createElement("div");
+    star2.classList.add("star", "small");
+
+    iconeLua.appendChild(star1);
+    iconeLua.appendChild(star2);
+
+    toggleLabel.appendChild(iconeSol);
+    toggleLabel.appendChild(iconeLua);
+
+    var themeText = document.createElement("span");
+    themeText.classList.add("theme-text");
+    themeText.innerText = "Tema";
+
+    toggleContainer.appendChild(toggleInput);
+    toggleContainer.appendChild(toggleLabel);
+    toggleContainer.appendChild(themeText);
+    toggleContainer.style.position = "absolute";
+    toggleContainer.style.bottom = "20px";
+    toggleContainer.style.right = "20px";
+
+    itens.appendChild(toggleContainer);
 
     toggleInput.addEventListener("change", function () {
         document.body.classList.toggle("dark-theme");
@@ -35,10 +219,28 @@
     })
 
 
+}
+
+
+
+
+
+
+
+
+function tabhorario() {
+
+    var conteinerseletor = document.getElementById("select-cont");
+    conteinerseletor.style.animation = "deladin 0.5s ease-out forwards"
+    setTimeout(tabelinha, 500)
+
+}
+
 function tabelinha() {
     var flexcont = document.getElementsByClassName("flexconteiner")
     var divTable = document.getElementById("table-conteiner")
     divTable.classList.add("table-conteiner")
+    divTable.innerHTML = ""
 
     var table = document.createElement("table")
     table.classList.add("tabela-horario")
@@ -1794,3 +1996,95 @@ function tabelinha() {
 
     }
 }
+
+
+// Arrays de dados
+const pages = [
+    { title: "Início", url: "index.html" },
+    { title: "Sobre", url: "sobre.html" },
+    { title: "Horários", url: "horarios.html" },
+    { title: "Cardápio", url: "cardapio.html" },
+    { title: "Área de Estudo", url: "areaestudo.html" },
+    { title: "Gestão e Professores", url: "gestao.html" },
+    { title: "Guia Para O Enem", url: "guiaTreineiro.html" }
+];
+
+const professores = [
+    { nome: "Lucas", disciplina: "Inglês", url: "gestao.html#lucas" },
+    { nome: "Mariana", disciplina: "Sociologia", url: "gestao.html#mariana" },
+    { nome: "Manuela", disciplina: "Biologia", url: "gestao.html#manuela" },
+    { nome: "Rute", disciplina: "Marketing e Serviços", url: "gestao.html#rute" },
+    { nome: "Ranaildo", disciplina: "Sistemas de Informação", url: "gestao.html#ranaildo" },
+    { nome: "Lula", disciplina: "Arte", url: "gestao.html#lula" },
+    { nome: "Eber Ramos", disciplina: "Português", url: "gestao.html#eber" },
+    { nome: "Marcelo", disciplina: "Biologia", url: "gestao.html#marcelo" },
+    { nome: "Daniel", disciplina: "Educação Física", url: "gestao.html#daniel" },
+    { nome: "Leonardo", disciplina: "Matemática", url: "gestao.html#leonardo" },
+    { nome: "Paulo", disciplina: "Geografia", url: "gestao.html#paulo" },
+    { nome: "Allan", disciplina: "Banco de Dados", url: "gestao.html#allan" },
+    { nome: "Nancy", disciplina: "Desenvolvimento de Sistemas", url: "gestao.html#nancy" },
+    { nome: "Iara", disciplina: "Projeto de Vida", url: "gestao.html#iara" },
+    { nome: "Rosa", disciplina: "Orientação Acadêmica", url: "gestao.html#rosa" },
+    { nome: "Francisco", disciplina: "História e Trilhas (UC1)", url: "gestao.html#francisco" },
+    { nome: "Linduberg", disciplina: "Metodologia do Trabalho Científico (MTC)", url: "gestao.html#linduberg" }
+];
+
+function pesquisa() {
+    const input = document.querySelector('.pesquisa');
+    const sugestaoContainer = document.getElementById('sugestaoContainer');
+
+     // Ajustar a largura e posição do container de sugestões
+    sugestaoContainer.style.position = 'absolute';
+    sugestaoContainer.style.top = `${input.offsetTop + input.offsetHeight}px`;
+    
+
+      // Exibir sugestões enquanto o usuário digita
+    input.addEventListener('input', function () {
+        const query = input.value.toLowerCase();
+        sugestaoContainer.innerHTML = ''; // Limpa sugestões anteriores
+
+        if (query) {
+            const suggestions = [];
+
+            // Buscar nos arrays de páginas e professores
+            pages.forEach(page => {
+                if (page.title.toLowerCase().includes(query)) {
+                    suggestions.push({ title: page.title, url: page.url });
+                }
+            });
+
+            professores.forEach(professor => {
+                if (professor.nome.toLowerCase().includes(query) || professor.disciplina.toLowerCase().includes(query)) {
+                    suggestions.push({ title: `${professor.nome} - ${professor.disciplina}`, url: professor.url });
+                }
+            });
+
+                                            // Exibir sugestões
+            suggestions.forEach(suggestion => {
+                const item = document.createElement('div');
+                item.classList.add('sugestao-item');
+                item.innerText = suggestion.title;
+                item.onclick = () => {
+                    window.location.href = suggestion.url; // Redireciona ao clicar
+                };
+                sugestaoContainer.appendChild(item);
+            });
+
+            // Mostra o container de sugestões
+            sugestaoContainer.style.display = 'block';
+        } else {
+            sugestaoContainer.style.display = 'none'; // Esconde o container se não houver texto
+        }
+    });
+
+    // Esconde o container de sugestões ao clicar fora
+    document.addEventListener('click', function (event) {
+        if (!sugestaoContainer.contains(event.target) && event.target !== input) {
+            sugestaoContainer.style.display = 'none';
+        }
+    });
+}
+
+window.onload = function () {
+    pesquisa();
+};
