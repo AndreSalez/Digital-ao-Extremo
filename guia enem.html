@@ -4,101 +4,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=0, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portal Ceep</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="guia enem style.css">
     <script src="JS.js"></script>
 </head>
 
 <body>
-        <!--barra de navegação superior-->
-    <nav id="nav">
-        <div class="btn-expandir">
-            <i class="bi bi-list" id="btn-exp"></i>
-            <a href="index.html" class="portal-tlt"> Portal CEEP </a>
-        </div>
-        
-        <input type="text" class="pesquisa" placeholder="Pesquisar...">
-    </nav>
+    <header>
+        <nav id="nav" alt="Menu de navegação">
+            <div class="burguer" onclick="menu()">
+                <div></div>
+                <div></div>
+                <div></div>
+                <span class="menutlt"> MENU </span>
+            </div>
+            <img src="logo.png.png" class="logo">
+            <input type="text" class="pesquisa" placeholder="Pesquisar...">
+            <div id="sugestaoContainer"></div>
 
-    <!--navegação do menu-->
-    <nav class="side-menu">
-        <ul class="menu-list">
-            <li class="menu-item">
-                <a href="index.html">
-                    <span class="menu-icon"> <i class="bi bi-house"></i> </span>
-                    <span class="menu-txtlink"> Inicio </span>
-                </a>
-            </li>
-            <li class="menu-item">
-                <a href="index.html">
-                    <span class="menu-icon"> <i class="bi bi-chat-dots-fill"></i> </span>
-                    <span class="menu-txtlink"> Sobre </span>
-                </a>
-            </li>
-            <li class="menu-item">
-                <a href="horarios.html">
-                    <span class="menu-icon"> <i class="bi bi-clock"></i> </span>
-                    <span class="menu-txtlink"> Horários </span>
-                </a>
-            </li>
-            <li class="menu-item">
-                <a href="cardapio.html">
-                    <span class="menu-icon"> <i class="bi bi-fork-knife"></i> </span>
-                    <span class="menu-txtlink"> Cardapio </span>
-                </a>
-            </li>
-            <li class="menu-item">
-                <a href="index.html">
-                    <span class="menu-icon"> <i class="bi bi-book"></i> </span>
-                    <span class="menu-txtlink"> Estudos </span>
-                </a>
-            </li>
-            <li class="menu-item">
-                <a href="index.html">
-                    <span class="menu-icon"> <i class="bi bi-person-workspace"></i> </span>
-                    <span class="menu-txtlink"> Gestão </span>
-                </a>
-            </li>
-        </ul>
-        <div class="theme-toggle-container">
-            <input type="checkbox" id="theme-toggle" class="theme-toggle">
-            <label for="theme-toggle" class="theme-toggle-label">
-                <div class="sun">
-                </div>
-                <div class="moon">
-                    <div class="star"></div>
-                    <div class="star-small"></div>
-                </div>
-            </label>
-        </div>
-    </nav>
+        </nav>
 
-    <!--Conteúdo Enem-->
+    </header>
+
+    <!--Conteúdo da pagina-->
     <main class="enem-main">
+        <!--Enem-->
         <div class="enem-container">
-            <img src="https://unifametro.edu.br/wp-content/uploads/2025/05/enem-1024x576-1.webp" class="enem-logo" width="300px">
             <div class="enem-content">
-                <div class="enem-text">
+                <img src="enem logo.png" class="enem-logo" width="300px">
+                <div class="main-contents">
                     <h1> Oque é o ENEM?</h1>
+                    <br>
                     <p> O Exame Nacional do Ensino Médio (ENEM) é um exame feito anualmente para avaliar o desempenho de
-                        estudantes que estão finalizando o ensino medio, e que desejam entrar para o ensino superior.</p>
-                        <br>
+                        estudantes que estão finalizando o ensino medio, e que desejam entrar para o ensino superior.
+                    </p>
+                    <br>
                     <p> Por meio da nota do ENEM, os alunos da rede pública podem participar de
                         programas governamentais que facilitam o ingresso em instituições de ensino superior. Um dos
-                        principais programas é o SISU (Sistema de Seleção Unificada), que oferece vagas em universidades públicas
+                        principais programas é o SISU (Sistema de Seleção Unificada), que oferece vagas em universidades
+                        públicas
                         de todo o país com base no desempenho no exame.</p>
-                        <br>
+                    <br>
                     <h1> Como me inscrever? </h1>
-                    <p> Você pode realizar a sua inscrição no enem atravez do site 
-                        <a href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem" class="link-enem">ENEM.INEP.GOB.BR</a></p>
+                    <p> Você pode realizar a sua inscrição no enem atravez do site
+                        <a href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem"
+                            target="_blank" class="link-enem">ENEM.INEP.GOV.BR.</a>
+                        A inscrição é feita online, e é necessário fornecer informações pessoais, como nome, CPF,
+                        data de nascimento, e escolher a cidade onde deseja realizar a prova. Além disso, é
+                        importante ficar atento aos prazos de inscrição, que geralmente ocorrem no primeiro semestre do
+                        ano.
+                    </p>
+                    <br>
+                    <p><strong> passo a passo</strong></p>
+                    <ul class="main-lists">
+                        <li>
+                            <p> acesse a pagina do participante </p>
+                        </li>
+                        <li>
+                            <p> coloque as informações necessarias </p>
+                        </li>
+                    </ul>
+                    <p> Após a inscrição, os participantes recebem um cartão de confirmação com informações sobre o
+                        local e horário da prova, além de orientações sobre o que levar no dia do exame.</p>
+
                 </div>
             </div>
         </div>
+        <!--Sisu-->
+        <div class="sisu-container">
+            <div class="sisu-content">
+                <img src="sisu logo.jpeg" class="sisu-logo" width="300px">
+                <div class="main-contents">
+                    <h1> Oque fazer com sua nota do ENEM</h1>
+                    <br>
+                    <p> Você que fez o ENEM e não foi aprovado, ainda pode usar sua nota para no Sistema de Seleção
+                        Unificada (SISU), é uma plataforma online que permite que os estudantes
+                        utilizem suas notas do ENEM para se inscrever em vagas em instituições públicas de ensino
+                        superior em todo o Brasil.
+                        <a href="https://sisualuno.mec.gov.br/#/login" target="_blank" class="link-enem">
+                            SISUALUNO.MEC.GOV.BR </a>
+                    </p>
+                    <br>
+                    <p> O SISU é uma oportunidade para os alunos da rede pública ingressarem em universidades federais e
+                        estaduais, ampliando o acesso à educação superior no país.</p>
+                    <h1> Como usar o sisu?</h1>
+                    <p> Você vai precisar ter um registro no site
+                        <a href="https://sso.acesso.gov.br/login?client_id=www.gov.br&authorization_id=19871612aba"
+                            target="_blank" class="link-enem"> GOV.BR </a>
+                        apos isso você pode acessar o site do SISU e se inscrever para as vagas disponíveis.
+                    </p>
+                </div>
+                <div class="main-contents">
+                    <h1> Dicas para o ENEM </h1>
+                    <p> Logo abaixo, vai algumas dicas basicas de como se preparar para o enem.</p>
+                    <ul class="main-lists">
+                        <li> Estude com antecedência e revise os conteúdos regularmente.</li>
+                        <li> Faça simulados para se familiarizar com o formato da prova.</li>
+                        <li> Organize seu tempo de estudo e evite deixar tudo para a última hora.</li>
+                        <li> Mantenha uma alimentação saudável e durma bem antes do dia da prova.</li>
+                        <li> Leia atentamente as instruções no dia do exame e siga as orientações dos aplicadores.</li>
+                    </ul>
+                </div>
+            </div>
+
     </main>
-    
-    <script src="JS.js"></script>
-    <script src="menu function.js"></script>
+
 </body>
 
 </html>

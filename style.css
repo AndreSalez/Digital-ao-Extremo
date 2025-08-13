@@ -83,7 +83,9 @@ a {
 
 }
 
+
 .nav-list li {
+
     width: 100%;
     transition: 0.7s;
     letter-spacing: 4px;
@@ -91,20 +93,15 @@ a {
     border-radius: 10px;
 }
 
-.nav-list li > a {
+
+.nav-list li a {
     border-radius: 10px;
     font-size: 20px;
     color: #122333;
-    padding: 20px 4% ;
+    padding: 20px 4%;
     display: flex;
     line-height: 40px;
     transition: 1s;
-}
-
-.menu-list li>a:hover {
-    transition: 0.5s;
-    background-color: #3c5b79;
-    font-size: 22px;
 }
 
 .nav-list li:hover a {
@@ -116,6 +113,12 @@ a {
     transition: 0.5s ease;
 }
 
+.nav-list li a:hover {
+    transition: 0.5s;
+    background-color: #3c5b79;
+    font-size: 22px;
+
+}
 
 .burguer {
 
@@ -205,21 +208,11 @@ body {
 }
 
 .pesquisa {
-
     align-self: center;
     margin-left: 10px;
-    /* Espaço entre a logo e o campo de pesquisa */
-    height: 30px;
-    border-radius: 5px;
-    padding: 5px;
-    font-size: 16px;
-    flex-shrink: 0;
-    /* Impede que o campo de pesquisa encolha */
     position: absolute;
     right: 15%;
-    /* Ajuste para posicionar ao lado da logo */
     width: 80px;
-    /* Largura inicial */
     height: 30px;
     border: 2px solid #ccc;
     border-radius: 5px;
@@ -227,8 +220,6 @@ body {
     font-size: 16px;
     outline: none;
     transition: all 0.3s ease;
-    /* Transição suave para todas as propriedades */
-
 }
 
 .pesquisa:focus {
@@ -384,34 +375,6 @@ body {
 
 }
 
-.tabelaCardapio {
-    display: flex;
-    flex-direction: column;
-    margin-top: 30px;
-    margin-left: 90px;
-    background-color: #fff;
-    border: solid #2a3e52;
-    border-radius: 9px;
-    align-items: center;
-    width: 1080px;
-    justify-self: center;
-
-}
-
-.tabelaCardapio table {
-    margin: 20px;
-    border: 1px solid #2a3e52;
-
-}
-
-.tabelaCardapio td {
-    text-align: center;
-    height: 80px;
-    width: 150px;
-    border: solid 1px #2a3e52;
-    font-weight: bold;
-}
-
 /*CORES DOS PROFESSORES NA TABELA DE HORARIO*/
 .Lucas {
     background-color: #cccab4;
@@ -509,90 +472,126 @@ body {
 
     background-color: #00EEEE;
 }
+/*----------------------------------------------------*/
 
-/*cardapio*/
-
-
-.lanche {
-
-    background: #FFAB24;
-    background: linear-gradient(180deg, #5272b6 1%, #ffffff 96%);
-
-}
-
-.almoco {
-
-    background: #FFAB24;
-    background: linear-gradient(180deg, #abd1ec 1%, #ffffff 96%);
-}
-
-.tituloCardapio {
-
-    font-weight: bold;
-    margin-top: 33px;
-}
-
-.titulodaFila {
-
-    font-weight: bold;
-    display: block;
-    align-self: center;
-
-
-
-}
-
-.diasSemanaCardapio {
-
-    background: #dddddd;
-    background: linear-gradient(180deg, #818181 1%, #ffffff 96%);
-
-}
-
-/*FILA DO LANCHE/*/
-
-.filaTabela {
+.cardapio-main {
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
-    margin-bottom: 50px;
-    margin-left: 90px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 100px
+}
+.cardapio-container {
     background-color: #fff;
     border: solid #2a3e52;
     border-radius: 9px;
     align-items: center;
-    width: 1080px;
+    justify-content: center;
+    width: 100%;
+    margin: 20px;
+}
+
+.table-cardapio {
+    justify-self: center;
+    padding: 20px;
+    margin: 20px;
+    background: rgb(255, 0, 217);
+    border-radius: 30px;
+}
+
+.cardapio-container td {
+    text-align: center;
+    height: 70px;
+    width: 120px;
+    border-radius: 30px;
+    border: solid 1px #2a3e52;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+}
+
+.lanche {
+    background: #ffffff;
+}
+
+.almoco {
+    background: #ffffff;
+}
+
+.diasSemana-cardapio {
+    color: white;
+    background: linear-gradient(to right, rgb(13, 12, 31), rgb(58, 58, 95));
+}
+
+.lanche-title {
+    color: white;
+    background: linear-gradient(to right, rgb(13, 12, 31), rgb(58, 58, 95));
+    height: 20px;
+    width: 120px;
+}
+.almoco-title {
+    color: white;
+    background: linear-gradient(to right, rgb(13, 12, 31), rgb(58, 58, 95));
+}
+.titulos-cardapio {
+    font-weight: bold;
+    font-size: 20px;
     justify-self: center;
 }
 
-.filaTabela table {
-    margin: 20px;
-    border: 1px solid #2a3e52;
-    height: 440px;
+/*FILA DO LANCHE/*/
+
+.fila-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: solid #2a3e52;
+    border-radius: 9px;
+    align-items: center;
+    justify-self: center;
     width: 100%;
-    border-spacing: 0;
-
-
 }
 
-.filaTabela td {
+.fila-tabela {
+    padding: 10px;
+    margin: 20px;
+    height: 440px;
+    width: 100%;
+    border-spacing: 3px;
+    border-radius: 30px;
+}
+.fila-tabela th {
+    background: linear-gradient(to right, rgb(13, 12, 31), rgb(58, 58, 95));
+    width: 40px; height: 40px;
+    border: solid 1px #2a3e52;
+    padding: 10px;
+    border-radius: 30px;
+    color: white;
+}
+.fila-tabela td {
     text-align: center;
-    height: 40px;
-    width: 80px;
+    height: 40px; width: 40px;
     border: solid 1px #2a3e52;
     font-weight: bold;
     text-size-adjust: 30px;
     table-layout: fixed;
-
-
+    border-radius: 30px;
+    border: solid 1px #2a3e52;
+    font-weight: bold;
+    padding: 10px;
 }
 
+/*----------------------------------*/
 
 
 
 /*//Responzívidaddy//*/
 
 @media (max-width: 999px) {
+
+    /*pagina inicial*/
+
     nav {
         display: flex;
         align-items: center;
@@ -608,42 +607,46 @@ body {
         text-transform: uppercase;
         width: 285px;
         overflow: hidden;
-        border: solid #490b2d;
     }
 
     .nav-list li {
-        width: 100%;
-        transition: 0.7s;
+        background-color: #f7f7f7;
+        width: 250px;
+        color: #122333;
         letter-spacing: 4px;
+        gap: 10px;
+        margin: 1px;
+
+        padding: 40px 15px 40px;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        border-radius: 10px;
     }
 
-    .nav-list li > a {
-        border-radius: 10px;
-        font-size: 20px;
-        color: #122333;
-        padding: 20px 4% ;
-        display: flex;
-        line-height: 40px;
-        transition: 1s;
-    }
-    
-    .menu-list li > a:hover {
-        transition: 0.5s;
-        background-color: #3c5b79;
-        font-size: 22px;
-    }
-    
-    .nav-list li:hover a {
-        font-size: 22px;
-        border-radius: 10px;
-        color: #f7f7f7;
-        text-decoration: none;
+    .nav-list li:hover {
         background-color: #122333;
+        padding: 47px 15px 40px;
+        border-radius: 7px;
+    }
+
+    .nav-list li a {
+        color: #122333;
+        font-size: 20px;
+
+    }
+
+    .nav-list li:hover a {
+        color: #122333;
+        text-decoration: none;
+        display: flex;
+        width: 100%;
+        background-color: #f6f8fa;
         transition: 0.5s ease;
     }
-    
+
+    .nav-list li a:hover {
+        font-size: 30px;
+        transition: 0.5s ease;
+    }
+
     .burguer {
 
         cursor: pointer;
@@ -691,8 +694,12 @@ body {
         justify-content: center;
         border-radius: 5px;
         font-weight: bold;
+    }
 
-
+    .pesquisa {
+        right: 5%;
+        width: 100px;
+        height: 20px;
     }
 
     .close-conteiner {
@@ -717,10 +724,19 @@ body {
         color: #490b2d !important;
         margin-right: 10px !important;
         margin-top: 1px !important;
-
     }
-
+    /*---------------------------------------------------*/
 }
+
+
+.logotext {
+    font-size: 30px;
+    color: #490b2d;
+    margin-right: 40px;
+    margin-top: 18px;
+    text-transform: uppercase;
+}
+
 /* TEMA ESCURO*/
 
 .theme-toggle-container {
@@ -760,20 +776,20 @@ nav.dark-theme {
     /* Borda escura */
 }
 
+nav.dark-theme .logotext {
+    font-size: 30px;
+    color: #ffffff;
+    margin-right: 40px;
+    margin-top: 18px;
+    text-transform: uppercase;
+}
+
 /* Tema escuro para o menu */
 .menu.dark-theme {
     background-color: #121212;
     /* Cor escura */
     color: #ffffff;
     /* Texto claro */
-}
-
-.menu.dark-theme .sun{
-    display: none;
-}
-
-.menu.dark-theme moon{
-
 }
 
 /* Tema escuro para os itens do menu */
@@ -940,9 +956,7 @@ nav.dark-theme {
     animation: theme-transition 0.5s ease forwards;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
-.menu.dark-theme a::hover {
-background-color: #1e1e1e
-}
+
 
 @keyframes theme-transition {
     from {
@@ -1065,7 +1079,7 @@ body.dark-theme .selectors-conteiner {
 }
 
 .slogan h2 {
-    margin-right: 895px;
+    margin-right: 770px;
     font-size: 20px;
     color: #11283d;
     text-align: center;
@@ -1080,3 +1094,4 @@ body.dark-theme .slogan h1 {
 body.dark-theme .slogan h2 {
     color: #dbdbdb !important;
 }
+

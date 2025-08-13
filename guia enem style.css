@@ -1,0 +1,101 @@
+
+.enem-main {
+    overflow: hidden;
+    margin: 200px;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.enem-content {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 30px;
+    border-radius: 7px;
+}
+
+.enem-logo {
+    align-self: center;
+    width: 250px;
+}
+.main-contents > p {
+    text-align: justify;
+    font-size: 20px;
+    color: #11283d;
+}
+
+.main-contents > h1 {
+    color: #c90202;
+    font-size: 30px;
+}
+
+.link-enem {
+    text-decoration: none;
+    color: #001ea3;
+}
+
+.sisu-content {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.sisu-logo {
+    align-self: center;
+    width: 250px;
+}
+
+.main-lists {
+    list-style: circle;
+    padding: 0;
+    margin: 3vh 0 3vh 3vh;
+    font-size: 18px;
+    color: #444d56;
+}
+.main-lists > li {
+    margin: 10px;
+}
+
+.dark-theme .enem-content {
+    background-color: #3b414f;
+    color: #dbdbdb;
+}
+.dark-theme .sisu-content {
+    background-color: #3b414f;
+    color: #dbdbdb;
+}
+.dark-theme .main-contents > p {
+    color: #dbdbdb;
+}
+.dark-theme .main-contents > h1 {
+    color: #f91414;
+}
+.dark-theme .sisu-logo {
+    background-color: white;
+    padding: 10px;
+    border-radius: 7px;
+}
+@media (max-width: 768px) {
+    .enem-main {
+        margin: 10px;
+        padding: 10px;
+    }
+    .enem-logo {
+        width: 200px;
+    }
+    .sisu-logo {
+        width: 200px;
+    }
+    .main-contents > p {
+        font-size: 16px;
+    }
+    .main-contents > h1 {
+        font-size: 24px;
+    }
+    .main-lists {
+        font-size: 16px;
+        margin: 2vh 0 2vh 2vh;
+    }
+}
