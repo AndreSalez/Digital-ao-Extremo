@@ -36,10 +36,6 @@
 
     }
 
-
-
-
-
     .nav-list li {
         width: 100%;
 
@@ -336,6 +332,7 @@
 
 @media (max-width: 999px) {
     .cardapio-main {
+        justify-self: center;
         justify-content: center;
         display: flex;
         flex-direction: column;
@@ -346,35 +343,57 @@
     }
 
     .cardapio-container {
+        width: 360px;
         background-color: #fff;
         border: solid #2a3e52;
         border-radius: 9px;
         align-items: center;
         justify-content: center;
-        overflow: hidden
     }
     .table-cardapio {
-        margin: 20px;
-        width: 100%;
-        height: 250px;
+        border-radius: 20px;
+        padding: 5px;
+        width: 350px;
+        height: 200px;
     }
     .cardapio-container td {
         text-align: center;
-        height: 20px;
+        height: 30px;
         width: 10px;
-        border-radius: 20px;
+        border-radius: 10px;
         border: solid 1px #2a3e52;
         border: none;
         font-size: 10px;
-    }
-    .table-cardapio {
-        margin-left: 10px;
-        margin-right: 10px;
-
+        padding: 0;
     }
     .fila-container {
+        font-size: 10px;
+        width: 350px;
+        height: 680px;
         align-items: normal;
         justify-self: center;
         overflow-x: auto;
+        justify-content: center;
+    }
+    .fila-tabela {
+        align-self: normal;
+    }
+    .fila-tabela th {
+        background: linear-gradient(to right, rgb(13, 12, 31), rgb(58, 58, 95));
+        width: 30px;
+        height: 25px;
+        border: solid 1px #2a3e52;
+        border-radius: 30px;
+        color: white;
+        padding: 5px;
+    }
+    .fila-tabela td {
+        height: 25px;
+        width: 30px;
+        table-layout: fixed;
+        padding: 5px;
+    }
+    .titulos-cardapio {
+        align-self: center;
     }
 }

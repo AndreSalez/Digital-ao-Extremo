@@ -472,6 +472,7 @@ body {
 
     background-color: #00EEEE;
 }
+
 /*----------------------------------------------------*/
 
 .cardapio-main {
@@ -482,6 +483,7 @@ body {
     padding: 20px;
     margin: 100px
 }
+
 .cardapio-container {
     background-color: #fff;
     border: solid #2a3e52;
@@ -530,10 +532,12 @@ body {
     height: 20px;
     width: 120px;
 }
+
 .almoco-title {
     color: white;
     background: linear-gradient(to right, rgb(13, 12, 31), rgb(58, 58, 95));
 }
+
 .titulos-cardapio {
     font-weight: bold;
     font-size: 20px;
@@ -561,17 +565,21 @@ body {
     border-spacing: 3px;
     border-radius: 30px;
 }
+
 .fila-tabela th {
     background: linear-gradient(to right, rgb(13, 12, 31), rgb(58, 58, 95));
-    width: 40px; height: 40px;
+    width: 40px;
+    height: 40px;
     border: solid 1px #2a3e52;
     padding: 10px;
     border-radius: 30px;
     color: white;
 }
+
 .fila-tabela td {
     text-align: center;
-    height: 40px; width: 40px;
+    height: 40px;
+    width: 40px;
     border: solid 1px #2a3e52;
     font-weight: bold;
     text-size-adjust: 30px;
@@ -725,6 +733,7 @@ body {
         margin-right: 10px !important;
         margin-top: 1px !important;
     }
+
     /*---------------------------------------------------*/
 }
 
@@ -1094,4 +1103,3 @@ body.dark-theme .slogan h1 {
 body.dark-theme .slogan h2 {
     color: #dbdbdb !important;
 }
-
