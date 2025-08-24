@@ -479,9 +479,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-self: center;
     justify-content: center;
-    padding: 20px;
-    margin: 100px
+    width: auto;
+    margin: auto;
+    margin-bottom: 20px;
 }
 
 .cardapio-container {
@@ -489,7 +491,6 @@ body {
     border: solid #2a3e52;
     border-radius: 9px;
     align-items: center;
-    justify-content: center;
     width: 100%;
     margin: 20px;
 }
@@ -538,28 +539,32 @@ body {
     background: linear-gradient(to right, rgb(13, 12, 31), rgb(58, 58, 95));
 }
 
-.titulos-cardapio {
+.titulo-cardapio {
+    margin: 10px 0 10px 0;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 25px;
+    justify-self: center;
+}
+.titulo-fila {
+    margin: 10px 0 10px 0;
+    font-weight: bold;
+    font-size: 25px;
     justify-self: center;
 }
 
 /*FILA DO LANCHE/*/
 
 .fila-container {
-    display: flex;
-    flex-direction: column;
     background-color: #fff;
     border: solid #2a3e52;
     border-radius: 9px;
-    align-items: center;
     justify-self: center;
     width: 100%;
+
 }
 
 .fila-tabela {
     padding: 10px;
-    margin: 20px;
     height: 440px;
     width: 100%;
     border-spacing: 3px;
@@ -1102,4 +1107,15 @@ body.dark-theme .slogan h1 {
 
 body.dark-theme .slogan h2 {
     color: #dbdbdb !important;
+}
+
+body.dark-theme .cardapio-container {
+    background-color: #3b414f !important;
+    border-color: #cecece !important;
+}
+body.dark-theme .titulos-cardapio {
+    color: white !important;
+}
+body.dark-theme .table-cardapio {
+    background: #2c2c32 !important;
 }

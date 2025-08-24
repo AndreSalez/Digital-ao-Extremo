@@ -368,15 +368,11 @@
     }
     .fila-container {
         font-size: 10px;
-        width: 350px;
-        height: 680px;
-        align-items: normal;
+        width: 360px;
+        height: 600px;
         justify-self: center;
         overflow-x: auto;
         justify-content: center;
-    }
-    .fila-tabela {
-        align-self: normal;
     }
     .fila-tabela th {
         background: linear-gradient(to right, rgb(13, 12, 31), rgb(58, 58, 95));
@@ -393,7 +389,14 @@
         table-layout: fixed;
         padding: 5px;
     }
-    .titulos-cardapio {
-        align-self: center;
+    .titulo-cardapio {
+        font-size: 20px;
+    }
+    .titulo-fila {
+        font-size: 20px;
+        position: sticky;
+        left: 50%;
+        z-index: 10;
+        transform: translateX(-50%);
     }
 }
