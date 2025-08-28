@@ -1119,3 +1119,17 @@ body.dark-theme .titulos-cardapio {
 body.dark-theme .table-cardapio {
     background: #2c2c32 !important;
 }
+body.dark-theme .fila-container {
+    background-color: #3b414f !important;
+    border-color: #cecece !important;
+}
+body.dark-theme .fila-tabela th {
+    background: #ededed !important;
+    color: rgb(0, 0, 0) !important;
+}
+body.dark-theme .titulo-cardapio {
+    color: white;
+}
+body.dark-theme .titulo-fila {
+    color: white;
+}
