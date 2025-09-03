@@ -7,25 +7,37 @@
 }
 
 .enem-content {
+    border: solid 3px #3b414f;
     display: flex;
     flex-direction: column;
     background-color: white;
-    padding: 30px;
-    border-radius: 7px;
+    padding: 60px;
+    border-radius: 30px;
 }
-
+.titulos-enem {
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+}
+.titulos-enem h1 {
+    color: #1964b9;
+    font-size: 60px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 .enem-logo {
+    object-fit: cover;
     align-self: center;
-    width: 300px;
+    width: 400px;
 }
 .main-contents > p {
     text-align: justify;
-    font-size: 20px;
+    font-size: 23px;
     color: #11283d;
 }
 
 .main-contents > h1 {
-    color: #a80909;
+    color: #1964b9;
     font-size: 30px;
 }
 
@@ -35,11 +47,12 @@
 }
 
 .sisu-content {
+    border: solid 3px #3b414f;
+    border-radius: 30px;
     display: flex;
     flex-direction: column;
     background-color: white;
     padding: 30px;
-    border-radius: 10px;
     margin-top: 20px;
 }
 .sisu-logo {

@@ -1,3 +1,19 @@
+// --- aplicar tema salvo assim que a página carregar ---
+document.addEventListener("DOMContentLoaded", () => {
+  const savedTheme = localStorage.getItem("savedTheme");
+  const isDark = savedTheme === "dark";
+
+  document.body.classList.toggle("dark-theme", isDark);
+
+  const nav = document.getElementById("nav");
+  if (nav) nav.classList.toggle("dark-theme", isDark);
+
+  const header = document.querySelector("header");
+  if (header) header.classList.toggle("dark-theme", isDark);
+});
+
+
+
 function menu() {
     var overlay = document.createElement("div");
     overlay.classList.add("overlay");
@@ -34,6 +50,7 @@ function menu() {
     var li4 = document.createElement("li");
     var li5 = document.createElement("li");
     var li6 = document.createElement("li");
+    var li7 = document.createElement("li");
 
     var link0 = document.createElement("a");
     var link1 = document.createElement("a");
@@ -42,6 +59,7 @@ function menu() {
     var link4 = document.createElement("a");
     var link5 = document.createElement("a");
     var link6 = document.createElement("a");
+    var link7 = document.createElement("a");
     
     var span0 = document.createElement("span");
     var span1 = document.createElement("span");
@@ -50,6 +68,7 @@ function menu() {
     var span4 = document.createElement("span");
     var span5 = document.createElement("span");
     var span6 = document.createElement("span");
+    var span7 = document.createElement("span");
 
 
 
@@ -60,6 +79,7 @@ function menu() {
     ul.appendChild(li4);
     ul.appendChild(li5);
     ul.appendChild(li6);
+    ul.appendChild(li7);
 
     li0.appendChild(link0);
     li1.appendChild(link1);
@@ -68,6 +88,7 @@ function menu() {
     li4.appendChild(link4);
     li5.appendChild(link5);
     li6.appendChild(link6);
+    li7.appendChild(link7);
 
     link0.appendChild(span0)
     link1.appendChild(span1)
@@ -76,6 +97,7 @@ function menu() {
     link4.appendChild(span4)
     link5.appendChild(span5)
     link6.appendChild(span6)
+    link7.appendChild(span7)
 
 
     span0.innerText = "Início";
@@ -99,6 +121,9 @@ function menu() {
     span6.innerText = "Guia Para O Enem";
     link6.href = "guiaTreineiro.html";
 
+    span7.innerText = "Eventos";
+    link7.href = "eventos.html";
+
     itens.appendChild(ul);
 
 
@@ -114,7 +139,7 @@ function menu() {
     conteinerclosebotao.appendChild(closebotao)
     itens.appendChild(conteinerclosebotao);
 
-    closebotao.innerText = "X";
+    closebotao.innerText = "×";
     closebotao.classList.add("menu-close");
 
 
@@ -150,76 +175,72 @@ function menu() {
     }
     )
 
-    var toggleContainer = document.createElement("div");
-    toggleContainer.classList.add("theme-toggle-container");
+    
+ var toggleContainer = document.createElement("div");
+toggleContainer.classList.add("theme-toggle-container");
 
-    var toggleInput = document.createElement("input");
-    toggleInput.type = "checkbox";
-    toggleInput.id = "theme-toggle";
-    toggleInput.classList.add("theme-toggle");
+var toggleInput = document.createElement("input");
+toggleInput.type = "checkbox";
+toggleInput.id = "theme-toggle";
+toggleInput.classList.add("theme-toggle");
 
-    var toggleLabel = document.createElement("label");
-    toggleLabel.setAttribute("for", "theme-toggle");
-    toggleLabel.classList.add("theme-toggle-label");
+var toggleLabel = document.createElement("label");
+toggleLabel.setAttribute("for", "theme-toggle");
+toggleLabel.classList.add("theme-toggle-label");
 
-    var iconeSol = document.createElement("div");
-    iconeSol.classList.add("sun");
+var iconeSol = document.createElement("div");
+iconeSol.classList.add("sun");
 
-    var iconeLua = document.createElement("div");
-    iconeLua.classList.add("moon");
-    var star1 = document.createElement("div");
-    star1.classList.add("star");
-    var star2 = document.createElement("div");
-    star2.classList.add("star", "small");
+var iconeLua = document.createElement("div");
+iconeLua.classList.add("moon");
+var star1 = document.createElement("div");
+star1.classList.add("star");
+var star2 = document.createElement("div");
+star2.classList.add("star", "small");
 
-    iconeLua.appendChild(star1);
-    iconeLua.appendChild(star2);
+iconeLua.appendChild(star1);
+iconeLua.appendChild(star2);
 
-    toggleLabel.appendChild(iconeSol);
-    toggleLabel.appendChild(iconeLua);
+toggleLabel.appendChild(iconeSol);
+toggleLabel.appendChild(iconeLua);
 
-    var themeText = document.createElement("span");
-    themeText.classList.add("theme-text");
-    themeText.innerText = "Tema";
+var themeText = document.createElement("span");
+themeText.classList.add("theme-text");
+themeText.innerText = "Tema";
 
-    toggleContainer.appendChild(toggleInput);
-    toggleContainer.appendChild(toggleLabel);
-    toggleContainer.appendChild(themeText);
-    toggleContainer.style.position = "absolute";
-    toggleContainer.style.bottom = "20px";
-    toggleContainer.style.right = "20px";
+toggleContainer.appendChild(toggleInput);
+toggleContainer.appendChild(toggleLabel);
+toggleContainer.appendChild(themeText);
+toggleContainer.style.position = "absolute";
+toggleContainer.style.bottom = "20px";
+toggleContainer.style.right = "20px";
 
-    itens.appendChild(toggleContainer);
+itens.appendChild(toggleContainer);
+// --- já marca o checkbox conforme tema salvo ---
+  const savedTheme = localStorage.getItem("savedTheme");
+  toggleInput.checked = savedTheme === "dark";
 
-    toggleInput.addEventListener("change", function () {
-        document.body.classList.toggle("dark-theme");
+  // --- evento de troca do tema ---
+  toggleInput.addEventListener("change", function () {
+    const isDark = toggleInput.checked;
 
-        var nav = document.getElementById("nav");
-        nav.classList.toggle("dark-theme");         // Apenas adiciona ou remove a classe 'dark-theme'
+    document.body.classList.toggle("dark-theme", isDark);
 
-        var header = document.querySelector("header");
-        header.classList.toggle("dark-theme");
+    var nav = document.getElementById("nav");
+    if (nav) nav.classList.toggle("dark-theme", isDark);
 
-        var menu = document.querySelector(".menu");
-        if (menu) {
-            menu.classList.toggle("dark-theme");
-        }
+    var header = document.querySelector("header");
+    if (header) header.classList.toggle("dark-theme", isDark);
 
+    var menu = document.querySelector(".menu");
+    if (menu) menu.classList.toggle("dark-theme", isDark);
 
-    });
-
-
-    const sun = document.querySelector('.sun')
-    const moon = document.querySelector('.moon')
-    const button = document.querySelector('.container')
-
-    button.addEventListener('click', () => {
-        sun.classList.toggle('visible')
-        moon.classList.toggle('visible')
-    })
-
+    localStorage.setItem("savedTheme", isDark ? "dark" : "light");
+  });
 
 }
+
+
 
 
 
@@ -2086,5 +2107,29 @@ function pesquisa() {
 }
 
 window.onload = function () {
-    pesquisa();
+    pesquisa();
 };
+
+
+
+//ZOOM DA PAGINA GESTÃO //
+
+document.addEventListener("DOMContentLoaded", () => {
+  const popup = document.getElementById("popup");
+  const popupImg = document.getElementById("popup-img");
+  const caption = document.getElementById("popup-caption");
+
+  document.querySelectorAll(".professor-image").forEach(img => {
+    img.addEventListener("click", () => {
+      popup.style.display = "flex";
+      popupImg.src = img.src;
+      caption.innerHTML = img.alt || "";
+    });
+  });
+
+  popup.addEventListener("click", (e) => {
+    if (e.target !== popupImg) {
+      popup.style.display = "none";
+    }
+  });
+});
