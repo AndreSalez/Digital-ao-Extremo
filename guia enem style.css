@@ -1,4 +1,4 @@
-
+/* parte com informações sobre o enem e inscrição*/
 .enem-main {
     overflow: hidden;
     margin: 200px;
@@ -19,6 +19,32 @@
     align-self: center;
     width: 400px;
 }
+.link-enem {
+    text-decoration: none;
+    color: #001ea3;
+}
+
+
+/* parte com informações sobre o sisu e inscrição */
+.sisu-content {
+    border: solid 3px #3b414f;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 30px;
+    margin-top: 20px;
+}
+.sisu-logo {
+    align-self: center;
+    width: 250px;
+}
+/* -------------------------------------------------------------------------------------- */
+
+
+
+
+/* classes gerais para elementos da pagina (listas, paragrafos e titulos*/
 .main-contents > p {
     text-align: justify;
     font-size: 23px;
@@ -33,25 +59,6 @@
     color: #224368;
 }
 
-.link-enem {
-    text-decoration: none;
-    color: #001ea3;
-}
-
-.sisu-content {
-    border: solid 3px #3b414f;
-    border-radius: 30px;
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    padding: 30px;
-    margin-top: 20px;
-}
-.sisu-logo {
-    align-self: center;
-    width: 250px;
-}
-
 .main-lists {
     list-style-type: disc;
     padding: 5px;
@@ -64,6 +71,53 @@
     margin: 10px;
     color: #444d56;
 }
+.conteudos-list::-webkit-scrollbar {
+    height: 8px;
+    width: 10px;
+}
+.conteudos-list::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+.conteudos-list::-webkit-scrollbar-thumb {
+    color: black;
+    background-color:#454655;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.1)
+}
+.conteudos-list::-webkit-scrollbar-button {
+    background-color:#bacee4;
+    height: 8px;
+    width: 8px;
+    border-radius: 3px;
+}
+
+.conteudos-list {
+    list-style-type: disc;
+    padding: 10px 10px 10px 40px;
+    margin: 3vh;
+    font-size: 21px;
+    width: 250px;
+    height: 570px;
+    border-radius: 30px;
+    background-color: #c6c6cc;
+    overflow-y: auto;
+}
+.conteudos-list li {
+    color: #2c2d35;
+    margin: 5px;
+}
+.conteudos-list h2 {
+    font-weight: 800;
+    color: #454655;
+}
+
+/* ----------------------------------------------- */
+
+
+
+
+
+/* Parte com conteudos para estudar para o Enem*/
 
 .conteudos-container {
     border: solid 3px #3b414f;
@@ -90,24 +144,6 @@
     color: #11283d;
 }
 
-.conteudos-list {
-    list-style-type: disc;
-    padding: 10px 10px 10px 40px;
-    margin: 3vh;
-    font-size: 21px;
-    width: 250px;
-    height: 570px;
-    border-radius: 30px;
-    background-color: #c6c6cc;
-}
-.conteudos-list li {
-    color: #2c2d35;
-    margin: 5px;
-}
-.conteudos-list h2 {
-    font-weight: 800;
-    color: #454655;
-}
 .conteudos-container h1 {
     display: block;
     width: 100%;
@@ -134,6 +170,34 @@
 .conteudos-content > h2 {
     color: #224368;
 }
+/* ----------------------------------------------------------------------- */
+
+
+
+/* Conteudos para estudar redação */
+.redacao-content {
+    margin: 10px 0 40px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: first baseline;
+}
+
+.redacao-list {
+    padding: 10px 10px 10px 30px;
+    list-style-type: disc;
+    margin: 3vh;
+    font-size: 21px;
+    width: 500px;
+    height: 630px;
+    border-radius: 30px;
+    background-color: #c6c6cc;
+}
+
+.redacao-list li {
+    color: #2c2d35;
+    margin: 5px;
+}
+/* tema escuro */
 
 body.dark-theme .enem-content {
     background-color: #3b414f;
@@ -155,6 +219,9 @@ body.dark-theme .main-lists li {
 .main-lists > li {
     margin: 10px;
 }
+
+/* Responsividade */
+
 @media (max-width: 768px) {
     .enem-main {
         margin: 10px;
