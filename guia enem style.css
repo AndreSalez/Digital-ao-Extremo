@@ -14,17 +14,6 @@
     padding: 60px;
     border-radius: 30px;
 }
-.titulos-enem {
-    align-items: center;
-    justify-content: space-around;
-    display: flex;
-    flex-direction: row;
-}
-.titulos-enem h1 {
-    color: #1964b9;
-    font-size: 60px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
 .enem-logo {
     object-fit: cover;
     align-self: center;
@@ -39,6 +28,9 @@
 .main-contents > h1 {
     color: #1964b9;
     font-size: 30px;
+}
+.main-contents > h2 {
+    color: #224368;
 }
 
 .link-enem {
@@ -61,14 +53,86 @@
 }
 
 .main-lists {
-    list-style: circle;
-    padding: 0;
-    margin: 3vh 0 3vh 3vh;
-    font-size: 18px;
-    color: #444d56;
+    list-style-type: disc;
+    padding: 5px;
+    margin: 3vh;
+    font-size: 23px;
+    width: 500px;
+    border-radius: 30px;
 }
 .main-lists > li {
     margin: 10px;
+    color: #444d56;
+}
+
+.conteudos-container {
+    border: solid 3px #3b414f;
+    background-color: white;
+    padding: 60px;
+    border-radius: 30px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.conteudos-container > h1 {
+    color: #1964b9;
+    font-size: 30px;
+    font-weight: 1000;
+    margin: 10px 0 10px 0;
+}
+.conteudos-container > h2 {
+    color: #224368;
+    font-weight: 900;
+}
+.conteudos-container > p {
+    text-align: justify;
+    font-size: 20px;
+    color: #11283d;
+}
+
+.conteudos-list {
+    list-style-type: disc;
+    padding: 10px 10px 10px 40px;
+    margin: 3vh;
+    font-size: 21px;
+    width: 250px;
+    height: 570px;
+    border-radius: 30px;
+    background-color: #c6c6cc;
+}
+.conteudos-list li {
+    color: #2c2d35;
+    margin: 5px;
+}
+.conteudos-list h2 {
+    font-weight: 800;
+    color: #454655;
+}
+.conteudos-container h1 {
+    display: block;
+    width: 100%;
+}
+.conteudos-content {
+    margin: 10px 0 40px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: first baseline;
+    justify-content: center;
+    justify-content: space-around;
+}
+.conteudos-content p {
+    text-align: justify;
+    font-size: 23px;
+    color: #11283d;
+}
+
+.conteudos-content h1 {
+    color: #1964b9;
+    font-size: 30px;
+}
+
+.conteudos-content > h2 {
+    color: #224368;
 }
 
 body.dark-theme .enem-content {
