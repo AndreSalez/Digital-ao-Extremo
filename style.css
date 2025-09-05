@@ -479,11 +479,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-self: center;
     justify-content: center;
-    width: auto;
-    margin: auto;
-    margin-bottom: 20px;
+    padding: 20px;
+    margin: 100px
 }
 
 .cardapio-container {
@@ -491,6 +489,7 @@ body {
     border: solid #2a3e52;
     border-radius: 9px;
     align-items: center;
+    justify-content: center;
     width: 100%;
     margin: 20px;
 }
@@ -499,7 +498,7 @@ body {
     justify-self: center;
     padding: 20px;
     margin: 20px;
-    background: rgb(255, 0, 217);
+    background: #c2c2c2;
     border-radius: 30px;
 }
 
@@ -539,32 +538,28 @@ body {
     background: linear-gradient(to right, rgb(13, 12, 31), rgb(58, 58, 95));
 }
 
-.titulo-cardapio {
-    margin: 10px 0 10px 0;
+.titulos-cardapio {
     font-weight: bold;
-    font-size: 25px;
-    justify-self: center;
-}
-.titulo-fila {
-    margin: 10px 0 10px 0;
-    font-weight: bold;
-    font-size: 25px;
+    font-size: 20px;
     justify-self: center;
 }
 
 /*FILA DO LANCHE/*/
 
 .fila-container {
+    display: flex;
+    flex-direction: column;
     background-color: #fff;
     border: solid #2a3e52;
     border-radius: 9px;
+    align-items: center;
     justify-self: center;
     width: 100%;
-
 }
 
 .fila-tabela {
     padding: 10px;
+    margin: 20px;
     height: 440px;
     width: 100%;
     border-spacing: 3px;
@@ -577,7 +572,7 @@ body {
     height: 40px;
     border: solid 1px #2a3e52;
     padding: 10px;
-    border-radius: 30px;
+    border-radius: 20px;
     color: white;
 }
 
@@ -589,7 +584,7 @@ body {
     font-weight: bold;
     text-size-adjust: 30px;
     table-layout: fixed;
-    border-radius: 30px;
+    border-radius: 20px;
     border: solid 1px #2a3e52;
     font-weight: bold;
     padding: 10px;
@@ -1080,7 +1075,7 @@ body.dark-theme .selectors-conteiner {
 .slogan {
 
     font-family: Holborn;
-}
+}  
 
 .slogan h1 {
     font-size: 70px;
@@ -1107,29 +1102,4 @@ body.dark-theme .slogan h1 {
 
 body.dark-theme .slogan h2 {
     color: #dbdbdb !important;
-}
-
-body.dark-theme .cardapio-container {
-    background-color: #3b414f !important;
-    border-color: #cecece !important;
-}
-body.dark-theme .titulos-cardapio {
-    color: white !important;
-}
-body.dark-theme .table-cardapio {
-    background: #2c2c32 !important;
-}
-body.dark-theme .fila-container {
-    background-color: #3b414f !important;
-    border-color: #cecece !important;
-}
-body.dark-theme .fila-tabela th {
-    background: #ededed !important;
-    color: rgb(0, 0, 0) !important;
-}
-body.dark-theme .titulo-cardapio {
-    color: white;
-}
-body.dark-theme .titulo-fila {
-    color: white;
 }
