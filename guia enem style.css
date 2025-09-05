@@ -1,9 +1,10 @@
 /* parte com informações sobre o enem e inscrição*/
 .enem-main {
+    width: 70%;
     overflow: hidden;
-    margin: 200px;
-    padding: 30px;
     border-radius: 10px;
+    justify-self: center;
+    margin: 100px 0 100px 0;
 }
 
 .enem-content {
@@ -11,8 +12,14 @@
     display: flex;
     flex-direction: column;
     background-color: white;
-    padding: 60px;
+    padding: 40px;
     border-radius: 30px;
+}
+.content-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 30px;
 }
 .enem-logo {
     object-fit: cover;
@@ -23,6 +30,9 @@
     text-decoration: none;
     color: #001ea3;
 }
+
+/* ---------------------------------------------------------------------------------- */
+
 
 
 /* parte com informações sobre o sisu e inscrição */
@@ -45,6 +55,9 @@
 
 
 /* classes gerais para elementos da pagina (listas, paragrafos e titulos*/
+.main-contents {
+    margin: 30px;
+}
 .main-contents > p {
     text-align: justify;
     font-size: 23px;
@@ -57,7 +70,10 @@
     font-size: 30px;
 }
 .main-contents > h2 {
-    color: #224368;
+    font-weight: 900;
+    color: #1964b9;
+    font-size: 30px;
+    margin: 20px;
 }
 
 .main-lists {
@@ -92,9 +108,9 @@
 .conteudos-list {
     list-style-type: disc;
     padding: 10px 10px 10px 40px;
-    margin: 3vh;
-    font-size: 21px;
-    width: 250px;
+    margin: 10px;
+    font-size: 25px;
+    width: 35%;
     height: 570px;
     border-radius: 30px;
     background-color: #c6c6cc;
@@ -102,11 +118,19 @@
 }
 .conteudos-list li {
     color: #2c2d35;
-    margin: 5px;
+    margin: 10px;
 }
 .conteudos-list h2 {
     font-weight: 800;
     color: #454655;
+}
+
+.titulos-enem {
+    justify-self: center;
+    align-self: center;
+    font-weight: 900;
+    color: #1964b9;
+    font-size: 45px;
 }
 
 /* ----------------------------------------------- */
@@ -118,6 +142,7 @@
 /* Parte com conteudos para estudar para o Enem*/
 
 .conteudos-container {
+    justify-content: center;
     border: solid 3px #3b414f;
     background-color: white;
     padding: 60px;
@@ -133,12 +158,12 @@
     margin: 10px 0 10px 0;
 }
 .conteudos-container > h2 {
-    color: #224368;
+    color: #1964b9;;
     font-weight: 900;
 }
 .conteudos-container > p {
     text-align: justify;
-    font-size: 20px;
+    font-size: 23px;
     color: #11283d;
 }
 
@@ -147,7 +172,7 @@
     width: 100%;
 }
 .conteudos-content {
-    margin: 10px 0 40px 0;
+    margin: 20px 0 20px 0;
     display: flex;
     flex-direction: row;
     align-items: first baseline;
@@ -160,13 +185,13 @@
     color: #11283d;
 }
 
-.conteudos-content h1 {
+.conteudos-container > h2 {
     color: #1964b9;
     font-size: 30px;
 }
-
-.conteudos-content > h2 {
+.conteudos-container > h3 {
     color: #224368;
+    font-size: 27px;
 }
 /* ----------------------------------------------------------------------- */
 
@@ -226,23 +251,45 @@ body.dark-theme .main-lists li {
         padding: 10px;
     }
     .enem-logo {
-        width: 200px;
+        width: 160px;
+    }
+    .enem-content {
+        padding: 3px;
+    }
+    .titulos-enem {
+        font-size: 25px;
+    }
+    .content-header {
+        margin: 20px 30px 5px 30px;
     }
     .sisu-content {
-        padding: 20px;
+        padding: 3px;
     }
     .sisu-logo {
-        width: 200px;
+        width: 100px;
         margin: 15px;
     }
     .main-contents > p {
         font-size: 16px;
     }
-    .main-contents > h1 {
-        font-size: 24px;
+    .main-contents > h2 {
+        font-size: 22px;
+        margin: 3px;
     }
     .main-lists {
         font-size: 16px;
         margin: 2vh 0 2vh 2vh;
+    }
+    .conteudos-content {
+        margin: 10px;
+    }
+    .conteudos-list {
+        list-style-type: disc;
+        padding: 10px 10px 10px 40px;
+        font-size: 17px;
+        width: 250px;
+        height: 570px;
+        overflow-y: auto;
+        word-wrap: break-word;
     }
 }
