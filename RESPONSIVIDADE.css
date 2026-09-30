@@ -21,7 +21,7 @@
 
     .flexbrasao {
         flex-direction: column;
-        margin-top: 70px;
+        justify-content: center;
     }
 
     .slogan {
@@ -31,10 +31,10 @@
     }
 
     .slogan h1 {
+        margin-left: 0;
         text-align: center;
         font-size: 70px;
         color: #B80f10;
-        margin-top: 300px;
         font-weight: bold;
         text-transform: uppercase;
     }
@@ -50,6 +50,7 @@
     }
 
     .brasao {
+        place-self: center;
         max-width: 300px;
         height: auto;
         margin: 50px 1px 1px;
@@ -72,14 +73,15 @@
         font-weight: 350;
         font-size: 16px;
     }
-
+    
     .itemEventos div {
         max-width: 95%;
-        height: 99vh;
+        height: 800px;
     }
 
     .itemEventos img {
         height: 46%;
+        max-width: 90%;
 
     }
 
@@ -169,7 +171,7 @@
 
         cursor: pointer;
         position: absolute;
-        top: 10px;
+        top: 18px;
         left: 10px;
 
     }
@@ -322,7 +324,7 @@
 
     .theme-toggle-container {
         position: absolute !important;
-        bottom: 40px !important;
+        bottom: 60px !important;
         left: 10px !important;
     }
 
@@ -376,7 +378,7 @@
 
         font-size: 30px !important;
         color: #B80F10 !important;
-        margin-right: 40px !important;
+        margin-right: 80px !important;
         margin-top: 15px !important;
 
     }
@@ -467,6 +469,9 @@
         font-size: 16px;
         margin: 2vh 0 2vh 2vh;
     }
+    .main-lists p {
+        font-size: 15px;
+    }
 
     .conteudos-container {
         padding: 10px;
@@ -544,7 +549,7 @@
     .table-cardapio {
         border-radius: 20px;
         padding: 5px;
-        width: 350px;
+        width: 95%;
         height: 200px;
     }
 
@@ -601,7 +606,7 @@
         font-size: 20px;
         position: sticky;
         left: 50%;
-        z-index: 10;
+        z-index: 0;
         transform: translateX(-50%);
     }
 }
@@ -774,6 +779,7 @@
     }
     .cursos-informacoes {
         margin: 5px;
+        width: 95%;
 
     }
 }
@@ -783,6 +789,7 @@
 @media (max-width: 999px) {
 .diretorio {
  height: 150px;
+ 
 }
 .diretorio p {
     line-height: 30px;
