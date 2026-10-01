@@ -117,6 +117,30 @@ a {
 
 }
 
+.index-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    overflow-y: scroll;
+    background-color: #F2F4F6;
+}
+
+.shortcut-container {
+    position: fixed;
+    background-color: #F8F9FB;
+    width: 100vw;
+    height: 30vh;
+    display: flex;
+}
+
+.shortcut-container > a {
+    margin: 10vh;
+    background-color: #ffffff;
+    width: 20vw;
+    height: 12vh;
+    background-color: #FFFFFF;
+}
+
 #nav {
     display: flex;
     justify-content: center;
@@ -233,7 +257,7 @@ a {
 }
 
 body {
-    background-color: #d9d9d9
+    background-color: #EFF1F3
 }
 
 .menu-close {
