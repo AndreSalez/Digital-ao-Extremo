@@ -16,6 +16,7 @@
     --cor-verm1:#FFB3AC;
     --cor-verm2:#FF544E;
     --cor-verm3:#DD3735;
+    --cor-verm4:#930010;
     /* azul */
 }
 
@@ -24,7 +25,6 @@ html {
 }
 
 body {
-    margin: 8dvh 0;
     overflow-y: scroll;
 }
 
@@ -85,6 +85,7 @@ a {
 }
 
 .flexbrasao {
+    margin: 8dvh 0 0 0;
     height: 50vh;
     display: flex;
     align-items: center; /* Alinha verticalmente os itens */
@@ -140,16 +141,22 @@ a {
 
 .shortcut-container {
     align-items: center;
-    justify-content: space-around;
     background-color: var(--cor-bran2);
+    justify-content: space-around;
     width: 100vw;
     height: 35vh;
     display: flex;
 }
 
+/* shortcuts - backgrounds separados */
+.shortcut-cardapio {
+    
+}
 .shortcut-container > a {
-    margin: 10px;
+    margin: 5px;
     background-color: var(--cor-verm3);
+    display: flex;
+    flex-direction: column;
     border-radius: 15px;
     padding: 20px;
     width: 23vw;
@@ -157,21 +164,38 @@ a {
 }
 
 .shortcut-container > a > span {
+    margin: 5px;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 700;
     color: var(--cor-bran1)
 }
 
+.shortcut-container > a > label {
+    margin: 5px;
+    max-width: 50%;
+    background-color: var(--cor-verm4);
+    color: var();
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 750;
+    text-align: center;
+    padding: 7px;
+}
+.shortcut-container > a > p {
+    font-size: 13px;
+    font-weight: 400;
+    margin: 5px;
+}
 #nav {
     top: 0;
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
     flex-direction: row;
-    background-color: #fCf7f7;
+    background-color: var(--cor-bran2);
     height: 8dvh;
     border-bottom-color: #B80f10;
-    border-bottom-style: groove;
+    box-shadow: 0 0 12px 0 rgba(0, 20, 0, 0.10);
     position: fixed;
     width: 100%;
 
@@ -1891,9 +1915,8 @@ body.dark-theme .cursos-informacoes h3 {
 }
 
 .diretorio {
-    bottom: 0;
+    position: relative;
     overflow: hidden;
-    bottom: 0vh;
     display: flex;
     flex-direction: column;
     align-items: center;
